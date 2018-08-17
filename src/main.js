@@ -2,10 +2,10 @@ import Vue from "vue";
 import App from "./App";
 import router from "./router/index";
 
-import PaperDashboard from "./plugins/paperDashboard";
+import BlackDashboard from "./plugins/blackDashboard";
 import "vue-notifyjs/themes/default.css";
 
-Vue.use(PaperDashboard);
+Vue.use(BlackDashboard);
 
 /* eslint-disable no-new */
 new Vue({

@@ -6,7 +6,7 @@ import "es6-promise/auto";
 
 //css assets
 import "bootstrap/dist/css/bootstrap.css";
-import "@/assets/sass/paper-dashboard.scss";
+import "@/assets/sass/black-dashboard.scss";
 import "@/assets/css/themify-icons.css";
 
 export default {

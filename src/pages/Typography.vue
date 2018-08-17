@@ -3,34 +3,34 @@
   <div class="col-md-12">
     <card>
       <template slot="header">
-        <h4 class="card-title">Paper Dashboard Headings</h4>
+        <h4 class="card-title">Black Dashboard Headings</h4>
         <p class="card-category">Created using
           <a href="https://www.google.com/fonts/specimen/Muli">Muli</a> Font Family</p>
       </template>
       <div class="content">
         <div class="typo-line">
           <h1>
-            <p class="category">Header 1</p>Paper Dashboard Heading </h1>
+            <p class="category">Header 1</p>Black Dashboard Heading </h1>
         </div>
         <div class="typo-line">
           <h2>
-            <p class="category">Header 2</p>Paper Dashboard Heading </h2>
+            <p class="category">Header 2</p>Black Dashboard Heading </h2>
         </div>
         <div class="typo-line">
           <h3>
-            <p class="category">Header 3</p>Paper Dashboard Heading </h3>
+            <p class="category">Header 3</p>Black Dashboard Heading </h3>
         </div>
         <div class="typo-line">
           <h4>
-            <p class="category">Header 4</p>Paper Dashboard Heading </h4>
+            <p class="category">Header 4</p>Black Dashboard Heading </h4>
         </div>
         <div class="typo-line">
           <h5>
-            <p class="category">Header 5</p>Paper Dashboard Heading </h5>
+            <p class="category">Header 5</p>Black Dashboard Heading </h5>
         </div>
         <div class="typo-line">
           <h6>
-            <p class="category">Header 6</p>Paper Dashboard Heading </h6>
+            <p class="category">Header 6</p>Black Dashboard Heading </h6>
         </div>
         <div class="typo-line">
           <p>
