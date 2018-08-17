@@ -1,17 +1,15 @@
-# [Vue Paper Dashboard](https://cristijora.github.io/vue-paper-dashboard/)
+# [Vue Black Dashboard](https://github.com/creativetimofficial/vue-black-dashboard)
 
-> Admin dashboard based on paper dashboard UI template + vue-router
+> Admin dashboard based on black dashboard UI template + vue-router
 
-This project is a vue version of [Paper-dashboard](https://www.creative-tim.com/product/paper-dashboard)
+This project is a vue version of [Black-dashboard](https://www.creative-tim.com/product/paper-dashboard)
 designed for vue js.The dashboard includes vue-router
 
-Check the [Live Demo here](https://cristijora.github.io/vue-paper-dashboard).
+Check the [Live Demo here](https://github.com/creativetimofficial/vue-black-dashboard).
 
-[Nuxt Version (outdated Bootstrap 3)](https://github.com/cristijora/vue-paper-dashboard-nuxt)
-![](http://i.imgur.com/3iC1hOs.gif)
 
 ## Documentation
-Link to [Documentation](http://vuejs.creative-tim.com/vue-paper-dashboard/documentation/)
+Link to [Documentation](http://vuejs.creative-tim.com/vue-black-dashboard/documentation/)
 
 ## Build Setup
 
@@ -44,4 +42,4 @@ For detailed explanation on how things work, checkout the [guide](https://github
 
 ## License
 
-[MIT](https://github.com/cristijora/vue-paper-dashboard/blob/master/LICENSE.md)
+[MIT](https://github.com/creativetimofficial/vue-black-dashboard/LICENCE.md)
