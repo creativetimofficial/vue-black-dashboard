@@ -1,42 +1,38 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">{{routeName}}</a>
-      <button class="navbar-toggler navbar-burger"
-              type="button"
+      <div class="navbar-wrapper">
+        <div class="navbar-toggle d-inline">
+          <button type="button" class="navbar-toggler">
+            <span class="navbar-toggler-bar bar1"></span>
+            <span class="navbar-toggler-bar bar2"></span>
+            <span class="navbar-toggler-bar bar3"></span>
+          </button>
+        </div>
+        <a class="navbar-brand" href="#pablo">{{routeName}}</a>
+      </div>
+      <button class="navbar-toggler" type="button"
+              data-toggle="collapse"
               @click="toggleSidebar"
               :aria-expanded="$sidebar.showSidebar"
+              data-target="#navigation"
+              aria-controls="navigation-index"
               aria-label="Toggle navigation">
-        <span class="navbar-toggler-bar"></span>
-        <span class="navbar-toggler-bar"></span>
-        <span class="navbar-toggler-bar"></span>
+        <span class="navbar-toggler-bar navbar-kebab"></span>
+        <span class="navbar-toggler-bar navbar-kebab"></span>
+        <span class="navbar-toggler-bar navbar-kebab"></span>
       </button>
+
       <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="ti-panel"></i>
-              <p>Stats</p>
-            </a>
-          </li>
-          <drop-down class="nav-item"
-                     title="5 Notifications"
-                     title-classes="nav-link"
-                     icon="ti-bell">
-            <a class="dropdown-item" href="#">Notification 1</a>
-            <a class="dropdown-item" href="#">Notification 2</a>
-            <a class="dropdown-item" href="#">Notification 3</a>
-            <a class="dropdown-item" href="#">Notification 4</a>
-            <a class="dropdown-item" href="#">Another notification</a>
-          </drop-down>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="ti-settings"></i>
-              <p>
-                Settings
-              </p>
-            </a>
-          </li>
+        <ul class="navbar-nav ml-auto ">
+          <div class="search-bar input-group">
+            <!-- <input type="text" class="form-control" placeholder="Search...">
+            <div class="input-group-addon"><i class="tim-icons icon-zoom-split"></i></div> -->
+            <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal">
+              <i class="tim-icons icon-zoom-split"></i>
+            </button>
+            <!-- You can choose types of search input -->
+          </div>
         </ul>
       </div>
     </div></nav>
