@@ -1,4 +1,5 @@
 import Notify from "vue-notifyjs";
+import "@/assets/css/nucleo-icons.css";
 import SideBar from "@/components/SidebarPlugin";
 import GlobalComponents from "./globalComponents";
 import GlobalDirectives from "./globalDirectives";
@@ -7,7 +8,6 @@ import "es6-promise/auto";
 //css assets
 import "bootstrap/dist/css/bootstrap.css";
 import "@/assets/sass/black-dashboard.scss";
-import "@/assets/css/themify-icons.css";
 
 export default {
   install(Vue) {

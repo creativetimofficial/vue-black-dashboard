@@ -2,39 +2,15 @@
   <div class="wrapper">
     <side-bar>
       <template slot="links">
-        <sidebar-link to="/dashboard" name="Dashboard" icon="ti-panel"/>
-        <sidebar-link to="/stats" name="User Profile" icon="ti-user"/>
-        <sidebar-link to="/table-list" name="Table List" icon="ti-view-list-alt"/>
-        <sidebar-link to="/typography" name="Typography" icon="ti-text"/>
-        <sidebar-link to="/icons" name="Icons" icon="ti-pencil-alt2"/>
-        <sidebar-link to="/maps" name="Map" icon="ti-map"/>
-        <sidebar-link to="/notifications" name="Notifications" icon="ti-bell"/>
+        <sidebar-link to="/dashboard" name="Dashboard" icon="tim-icons icon-chart-pie-36"/>
+        <sidebar-link to="/icons" name="Icons" icon="tim-icons icon-atom"/>
+        <sidebar-link to="/maps" name="Map" icon="tim-icons icon-pin"/>
+        <sidebar-link to="/notifications" name="Notifications" icon="tim-icons icon-bell-55"/>
+        <sidebar-link to="/user-profile" name="User Profile" icon="tim-icons icon-bell-55"/>
+        <sidebar-link to="/table-list" name="Table List" icon="tim-icons icon-puzzle-10"/>
+        <sidebar-link to="/typography" name="Typography" icon="tim-icons icon-align-center"/>
+        <sidebar-link to="/rtl-support" name="RTL Support" icon="tim-icons icon-world"/>
       </template>
-      <mobile-menu>
-        <li class="nav-item">
-          <a class="nav-link">
-            <i class="ti-panel"></i>
-            <p>Stats</p>
-          </a>
-        </li>
-        <drop-down class="nav-item"
-                   title="5 Notifications"
-                   title-classes="nav-link"
-                   icon="ti-bell">
-          <a class="dropdown-item">Notification 1</a>
-          <a class="dropdown-item">Notification 2</a>
-          <a class="dropdown-item">Notification 3</a>
-          <a class="dropdown-item">Notification 4</a>
-          <a class="dropdown-item">Another notification</a>
-        </drop-down>
-        <li class="nav-item">
-          <a class="nav-link">
-            <i class="ti-settings"></i>
-            <p>Settings</p>
-          </a>
-        </li>
-        <li class="divider"></li>
-      </mobile-menu>
     </side-bar>
     <div class="main-panel">
       <top-navbar></top-navbar>
