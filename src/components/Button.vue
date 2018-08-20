@@ -3,6 +3,7 @@
     :is="tag"
     :type="nativeType"
     :disabled="disabled || loading"
+    @click="handleClick"
     class="btn"
     :class="[
       {'btn-round': round},
@@ -46,6 +47,11 @@ export default {
       default: ""
     },
     simple: Boolean
+  },
+  methods: {
+    handleClick(evt) {
+      this.$emit('click', evt);
+    }
   }
 };
 </script>

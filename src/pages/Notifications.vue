@@ -60,24 +60,24 @@
         </div>
         <div class="row d-flex justify-content-center">
           <div class="col-md-3">
-            <p-button round outline block @click.native="notifyVue('top', 'left')">Top Left</p-button>
+            <p-button type="primary" block @click="notifyVue('top', 'left')">Top Left</p-button>
           </div>
           <div class="col-md-3">
-            <p-button round outline block @click.native="notifyVue('top', 'center')">Top Center</p-button>
+            <p-button type="primary" block @click="notifyVue('top', 'center')">Top Center</p-button>
           </div>
           <div class="col-md-3">
-            <p-button round outline block @click.native="notifyVue('top', 'right')">Top Right</p-button>
+            <p-button type="primary" block @click="notifyVue('top', 'right')">Top Right</p-button>
           </div>
         </div>
         <div class="row d-flex justify-content-center">
           <div class="col-md-3">
-            <p-button round outline block @click.native="notifyVue('bottom', 'left')">Bottom Left</p-button>
+            <p-button type="primary" block @click="notifyVue('bottom', 'left')">Bottom Left</p-button>
           </div>
           <div class="col-md-3">
-            <p-button round outline block @click.native="notifyVue('bottom', 'center')">Bottom Center</p-button>
+            <p-button type="primary" block @click="notifyVue('bottom', 'center')">Bottom Center</p-button>
           </div>
           <div class="col-md-3">
-            <p-button round outline block @click.native="notifyVue('bottom', 'right')">Bottom Right</p-button>
+            <p-button type="primary" block @click="notifyVue('bottom', 'right')">Bottom Right</p-button>
           </div>
 
         </div>
@@ -102,7 +102,7 @@ export default {
       const color = Math.floor(Math.random() * 4 + 1);
       this.$notify({
         component: NotificationTemplate,
-        icon: "ti-gift",
+        icon: "tim-icons icon-bell-55",
         horizontalAlign: horizontalAlign,
         verticalAlign: verticalAlign,
         type: this.type[color]
