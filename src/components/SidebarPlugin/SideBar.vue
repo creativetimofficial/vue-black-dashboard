@@ -9,10 +9,10 @@
     <!-- -->
     <div class="sidebar-wrapper" id="style-3">
       <div class="logo">
-        <a href="#" class="simple-text">
-            <div class="logo-img">
-                <!--<img src="@/assets/img/vue-logo.png" alt="">-->
-            </div>
+        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+          {{shortTitle}}
+        </a>
+        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
           {{title}}
         </a>
       </div>
@@ -43,7 +43,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: "Black Dashboard"
+      default: "Creative Tim"
     },
     backgroundColor: {
       type: String,
@@ -94,6 +94,11 @@ export default {
      */
     arrowMovePx() {
       return this.linkHeight * this.activeLinkIndex;
+    },
+    shortTitle() {
+      return this.title.split(' ')
+        .map(word => word.charAt(0))
+        .join('').toUpperCase();
     }
   },
   data() {

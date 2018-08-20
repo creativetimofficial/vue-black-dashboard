@@ -1,7 +1,7 @@
 import FormGroupInput from "./Inputs/formGroupInput.vue";
 
 import BaseDropdown from "./BaseDropdown.vue";
-import PaperTable from "./PaperTable.vue";
+import BaseTable from "./BaseTable.vue";
 import BaseButton from "./BaseButton";
 import BaseAlert from "./BaseAlert";
 
@@ -16,7 +16,7 @@ export {
   Card,
   ChartCard,
   StatsCard,
-  PaperTable,
+  BaseTable,
   BaseDropdown,
   BaseButton,
   BaseAlert,
