@@ -30,7 +30,9 @@ export default {
   components: {
     contentRender: {
       props: ['component'],
-      render: h => h(this.component)
+      render(h) {
+        return h(this.component)
+      }
     }
   },
   props: {
@@ -153,7 +155,8 @@ export default {
   z-index: 10000;
 
   &[data-notify='container'] {
-    width: 400px;
+    width: 480px;
+    cursor: pointer;
   }
 
   &.center {

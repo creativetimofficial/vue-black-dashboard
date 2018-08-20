@@ -22,7 +22,7 @@
 </template>
 <script>
 export default {
-  name: 'p-button',
+  name: 'base-button',
   props: {
     tag: {
       type: String,

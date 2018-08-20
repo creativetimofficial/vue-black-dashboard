@@ -21,6 +21,7 @@
 </template>
 <script>
 export default {
+  name: 'base-dropdown',
   props: {
     tag: {
       type: String,

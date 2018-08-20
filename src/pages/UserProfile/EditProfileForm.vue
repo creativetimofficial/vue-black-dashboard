@@ -92,11 +92,11 @@
           </div>
         </div>
         <div class="text-center">
-          <p-button type="info"
+          <base-button type="info"
                     round
                     @click.native.prevent="updateProfile">
             Update Profile
-          </p-button>
+          </base-button>
         </div>
         <div class="clearfix"></div>
       </form>

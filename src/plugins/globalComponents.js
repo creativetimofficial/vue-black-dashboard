@@ -1,4 +1,4 @@
-import { FormGroupInput, Card, DropDown, Button } from "../components/index";
+import { FormGroupInput, Card, BaseDropdown, BaseButton } from "../components/index";
 /**
  * You can register global components here and use them as a plugin in your main Vue instance
  */
@@ -6,9 +6,9 @@ import { FormGroupInput, Card, DropDown, Button } from "../components/index";
 const GlobalComponents = {
   install(Vue) {
     Vue.component("fg-input", FormGroupInput);
-    Vue.component("drop-down", DropDown);
-    Vue.component("card", Card);
-    Vue.component("p-button", Button);
+    Vue.component(Card.name, Card);
+    Vue.component(BaseDropdown.name, BaseDropdown);
+    Vue.component(BaseButton.name, BaseButton);
   }
 };
 

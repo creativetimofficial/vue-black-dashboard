@@ -18,9 +18,9 @@
             </div>
 
             <div class="col-3">
-              <p-button type="success" outline icon>
+              <base-button type="success" outline icon>
                 <i class="fa fa-envelope"></i>
-              </p-button>
+              </base-button>
             </div>
           </div>
         </li>
