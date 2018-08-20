@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
+    "chart.js": "^2.7.2",
     "chartist": "^0.11.0",
     "es6-promise": "^4.2.4",
     "vue": "^2.5.17",
+    "vue-chartjs": "^3.4.0",
     "vue-router": "^3.0.1",
     "vue2-transitions": "^0.2.3"
   },
