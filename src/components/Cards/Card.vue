@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" :class="[type && `card-${type}`]">
     <div class="card-image" v-if="$slots.image">
       <slot name="image"></slot>
     </div>
@@ -14,7 +14,6 @@
     </div>
     <slot name="raw-content"></slot>
     <div class="card-footer" v-if="$slots.footer">
-      <hr>
       <slot name="footer"></slot>
     </div>
   </div>
@@ -24,7 +23,8 @@ export default {
   name: "card",
   props: {
     title: String,
-    subTitle: String
+    subTitle: String,
+    type: String
   }
 };
 </script>

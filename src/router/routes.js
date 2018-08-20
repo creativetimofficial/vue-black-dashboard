@@ -4,7 +4,7 @@ import NotFound from "@/pages/NotFoundPage.vue";
 
 // Admin pages
 import Dashboard from "@/pages/Dashboard.vue";
-import UserProfile from "@/pages/UserProfile.vue";
+import Profile from "@/pages/Profile.vue";
 import Notifications from "@/pages/Notifications.vue";
 import Icons from "@/pages/Icons.vue";
 import Maps from "@/pages/Maps.vue";
@@ -23,9 +23,9 @@ const routes = [
         component: Dashboard
       },
       {
-        path: "stats",
-        name: "stats",
-        component: UserProfile
+        path: "profile",
+        name: "profile",
+        component: Profile
       },
       {
         path: "notifications",
@@ -54,7 +54,7 @@ const routes = [
       }
     ]
   },
-  { path: "*", component: NotFound }
+  { path: "*", component: NotFound },
 ];
 
 /**

@@ -5,7 +5,7 @@ import { FormGroupInput, Card, BaseDropdown, BaseButton } from "../components/in
 
 const GlobalComponents = {
   install(Vue) {
-    Vue.component("fg-input", FormGroupInput);
+    Vue.component(FormGroupInput.name, FormGroupInput);
     Vue.component(Card.name, Card);
     Vue.component(BaseDropdown.name, BaseDropdown);
     Vue.component(BaseButton.name, BaseButton);

@@ -6,7 +6,7 @@
         <sidebar-link to="/icons" name="Icons" icon="tim-icons icon-atom"/>
         <sidebar-link to="/maps" name="Map" icon="tim-icons icon-pin"/>
         <sidebar-link to="/notifications" name="Notifications" icon="tim-icons icon-bell-55"/>
-        <sidebar-link to="/user-profile" name="User Profile" icon="tim-icons icon-bell-55"/>
+        <sidebar-link to="/profile" name="User Profile" icon="tim-icons icon-single-02"/>
         <sidebar-link to="/table-list" name="Table List" icon="tim-icons icon-puzzle-10"/>
         <sidebar-link to="/typography" name="Typography" icon="tim-icons icon-align-center"/>
         <sidebar-link to="/rtl-support" name="RTL Support" icon="tim-icons icon-world"/>

@@ -8,7 +8,7 @@
     :class="[
       {'btn-round': round},
       {'btn-block': block},
-      {'btn-just-icon': icon},
+      {'btn-icon': icon},
       {[`btn-${type}`]: type && !outline},
       {[`btn-outline-${type}`]: type && outline},
       {[`btn-${size}`]: size},
