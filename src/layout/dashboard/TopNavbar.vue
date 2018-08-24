@@ -43,6 +43,9 @@ export default {
     routeName() {
       const { name } = this.$route;
       return this.capitalizeFirstLetter(name);
+    },
+    isRTL() {
+      return this.$rtl.isRTL;
     }
   },
   data() {

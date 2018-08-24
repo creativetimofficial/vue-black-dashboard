@@ -2,6 +2,7 @@ import SideBar from "@/components/SidebarPlugin";
 import Notify from "@/components/NotificationPlugin";
 import GlobalComponents from "./globalComponents";
 import GlobalDirectives from "./globalDirectives";
+import RTLPlugin from "./RTLPlugin";
 import "es6-promise/auto";
 
 //css assets
@@ -16,5 +17,6 @@ export default {
     Vue.use(GlobalDirectives);
     Vue.use(SideBar);
     Vue.use(Notify);
+    Vue.use(RTLPlugin);
   }
 }
