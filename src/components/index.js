@@ -1,5 +1,6 @@
 import FormGroupInput from "./Inputs/formGroupInput.vue";
 
+import BaseCheckbox from "./BaseCheckbox.vue";
 import BaseDropdown from "./BaseDropdown.vue";
 import BaseTable from "./BaseTable.vue";
 import BaseButton from "./BaseButton";
@@ -15,6 +16,7 @@ export {
   Card,
   StatsCard,
   BaseTable,
+  BaseCheckbox,
   BaseDropdown,
   BaseButton,
   BaseAlert,
