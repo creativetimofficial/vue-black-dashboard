@@ -4,7 +4,6 @@ import NotFound from "@/pages/NotFoundPage.vue";
 
 // Admin pages
 import Dashboard from "@/pages/Dashboard.vue";
-import RTLSupport from "@/pages/RTLSupport.vue";
 import Profile from "@/pages/Profile.vue";
 import Notifications from "@/pages/Notifications.vue";
 import Icons from "@/pages/Icons.vue";
@@ -52,12 +51,7 @@ const routes = [
         path: "table-list",
         name: "table-list",
         component: TableList
-      },
-      {
-        path: "rtl-support",
-        name: "RTLSupport",
-        component: RTLSupport
-      },
+      }
     ]
   },
   { path: "*", component: NotFound },

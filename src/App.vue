@@ -1,16 +1,21 @@
 <template>
   <div :class="{'nav-open': $sidebar.showSidebar}">
     <notifications></notifications>
-    <router-view></router-view>
+    <router-view :key="$route.fullPath"></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  mounted() {
-    if(!this.$rtl.isRTL) {
-      this.$rtl.disableRTL();
+  methods: {
+    disableRTL() {
+      if(!this.$rtl.isRTL) {
+        this.$rtl.disableRTL();
+      }
     }
+  },
+  mounted() {
+    this.$watch('$route', this.disableRTL, {immediate: true});
   }
 };
 </script>

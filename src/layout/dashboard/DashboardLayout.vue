@@ -9,7 +9,7 @@
         <sidebar-link to="/profile" name="User Profile" icon="tim-icons icon-single-02"/>
         <sidebar-link to="/table-list" name="Table List" icon="tim-icons icon-puzzle-10"/>
         <sidebar-link to="/typography" name="Typography" icon="tim-icons icon-align-center"/>
-        <sidebar-link to="/rtl-support" name="RTL Support" icon="tim-icons icon-world"/>
+        <sidebar-link to="/dashboard?enableRTL=true" name="RTL Support" icon="tim-icons icon-world"/>
       </template>
     </side-bar>
     <div class="main-panel">

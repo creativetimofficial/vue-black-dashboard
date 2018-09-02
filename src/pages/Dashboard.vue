@@ -6,12 +6,14 @@
         <card type="chart">
           <template slot="header">
             <div class="row">
-              <div class="col-sm-6 text-left">
+              <div class="col-sm-6" :class="isRTL ? 'text-right' : 'text-left'">
                 <h5 class="card-category">Total Shipments</h5>
                 <h2 class="card-title">Performance</h2>
               </div>
               <div class="col-sm-6">
-                <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                <div class="btn-group btn-group-toggle"
+                     :class="isRTL ? 'float-left' : 'float-right'"
+                     data-toggle="buttons">
                   <label v-for="(option, index) in bigLineChart.categories"
                          :key="option"
                          class="btn btn-sm btn-primary btn-simple"
@@ -40,7 +42,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-4">
+      <div class="col-lg-4" :class="{'text-right': isRTL}">
         <card type="chart">
           <template slot="header">
             <h5 class="card-category">Total Shipments</h5>
@@ -56,7 +58,7 @@
           </div>
         </card>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4" :class="{'text-right': isRTL}">
         <card type="chart">
           <template slot="header">
             <h5 class="card-category">Daily Sales</h5>
@@ -72,7 +74,7 @@
           </div>
         </card>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4" :class="{'text-right': isRTL}">
         <card type="chart">
           <template slot="header">
             <h5 class="card-category">Completed Tasks</h5>
@@ -91,20 +93,18 @@
     </div>
     <div class="row">
       <div class="col-lg-6 col-md-12">
-        <card type="tasks">
+        <card type="tasks" :header-classes="{'text-right': isRTL}">
           <template slot="header">
             <h6 class="title d-inline">Tasks(5)</h6>
             <p class="card-category d-inline">today</p>
-            <div class="dropdown">
-              <button type="button" class="btn btn-link dropdown-toggle btn-icon" data-toggle="dropdown">
+            <base-dropdown menu-on-right="" tag="div" :class="{'float-left': isRTL}">
+              <base-button slot="title" type="link" icon class="dropdown-toggle">
                 <i class="tim-icons icon-settings-gear-63"></i>
-              </button>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#pablo">Action</a>
-                <a class="dropdown-item" href="#pablo">Another action</a>
-                <a class="dropdown-item" href="#pablo">Something else</a>
-              </div>
-            </div>
+              </base-button>
+              <a class="dropdown-item" href="#pablo">Action</a>
+              <a class="dropdown-item" href="#pablo">Another action</a>
+              <a class="dropdown-item" href="#pablo">Something else</a>
+            </base-dropdown>
           </template>
           <div class="table-full-width table-responsive">
             <task-list></task-list>
@@ -112,16 +112,12 @@
         </card>
       </div>
       <div class="col-lg-6 col-md-12">
-        <div class="card ">
-          <div class="card-header">
-            <h4 class="card-title"> Simple Table</h4>
+        <card class="card" :header-classes="{'text-right': isRTL}">
+          <h4 slot="header" class="card-title"> Simple Table</h4>
+          <div class="table-responsive">
+            <user-table></user-table>
           </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <user-table></user-table>
-            </div>
-          </div>
-        </div>
+        </card>
       </div>
     </div>
   </div>
@@ -222,6 +218,14 @@
         }
       }
     },
+    computed: {
+      enableRTL() {
+        return this.$route.query.enableRTL;
+      },
+      isRTL() {
+        return this.$rtl.isRTL;
+      }
+    },
     methods: {
       initBigChart(index) {
         let chartData = {
@@ -249,7 +253,15 @@
       }
     },
     mounted() {
+      if (this.enableRTL) {
+        this.$rtl.enableRTL();
+      }
       this.initBigChart(0);
+    },
+    beforeDestroy() {
+      if (this.$rtl.isRTL) {
+        this.$rtl.disableRTL();
+      }
     }
   };
 </script>

@@ -43,7 +43,7 @@ export default {
   mounted() {
     this.$watch('chartData', (newVal, oldVal) => {
       this.updateGradients(this.chartData);
-      if (oldVal === null) {
+      if (!oldVal) {
         this.renderChart(
           this.chartData,
           this.extraOptions

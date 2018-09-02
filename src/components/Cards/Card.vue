@@ -3,7 +3,7 @@
     <div class="card-image" v-if="$slots.image">
       <slot name="image"></slot>
     </div>
-    <div class="card-header" v-if="$slots.header || title">
+    <div class="card-header" v-if="$slots.header || title" :class="headerClasses">
       <slot name="header">
         <h4 class="card-title">{{title}}</h4>
         <p class="card-category" v-if="subTitle">{{subTitle}}</p>
@@ -25,7 +25,7 @@ export default {
     title: String,
     subTitle: String,
     type: String,
-    cardHeaderClasses: [String, Object]
+    headerClasses: [String, Object, Array]
   }
 };
 </script>

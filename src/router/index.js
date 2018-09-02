@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 // configure router
 const router = new VueRouter({
   routes, // short for routes: routes
-  linkActiveClass: "active",
+  linkExactActiveClass: "active",
   scrollBehavior: (to) => {
     if (to.hash) {
       return {selector: to.hash}
