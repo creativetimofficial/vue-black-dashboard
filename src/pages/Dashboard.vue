@@ -7,14 +7,14 @@
           <template slot="header">
             <div class="row">
               <div class="col-sm-6" :class="isRTL ? 'text-right' : 'text-left'">
-                <h5 class="card-category">Total Shipments</h5>
-                <h2 class="card-title">Performance</h2>
+                <h5 class="card-category">{{$t('dashboard.totalShipments')}}</h5>
+                <h2 class="card-title">{{$t('dashboard.performance')}}</h2>
               </div>
               <div class="col-sm-6">
                 <div class="btn-group btn-group-toggle"
                      :class="isRTL ? 'float-left' : 'float-right'"
                      data-toggle="buttons">
-                  <label v-for="(option, index) in bigLineChart.categories"
+                  <label v-for="(option, index) in bigLineChartCategories"
                          :key="option"
                          class="btn btn-sm btn-primary btn-simple"
                          :class="{active: bigLineChart.activeIndex === index}"
@@ -45,7 +45,7 @@
       <div class="col-lg-4" :class="{'text-right': isRTL}">
         <card type="chart">
           <template slot="header">
-            <h5 class="card-category">Total Shipments</h5>
+            <h5 class="card-category">{{$t('dashboard.totalShipments')}}</h5>
             <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i> 763,215</h3>
           </template>
           <div class="chart-area">
@@ -61,7 +61,7 @@
       <div class="col-lg-4" :class="{'text-right': isRTL}">
         <card type="chart">
           <template slot="header">
-            <h5 class="card-category">Daily Sales</h5>
+            <h5 class="card-category">{{$t('dashboard.dailySales')}}</h5>
             <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info "></i> 3,500€</h3>
           </template>
           <div class="chart-area">
@@ -77,7 +77,7 @@
       <div class="col-lg-4" :class="{'text-right': isRTL}">
         <card type="chart">
           <template slot="header">
-            <h5 class="card-category">Completed Tasks</h5>
+            <h5 class="card-category">{{$t('dashboard.completedTasks')}}</h5>
             <h3 class="card-title"><i class="tim-icons icon-send text-success "></i> 12,100K</h3>
           </template>
           <div class="chart-area">
@@ -101,9 +101,9 @@
               <base-button slot="title" type="link" icon class="dropdown-toggle">
                 <i class="tim-icons icon-settings-gear-63"></i>
               </base-button>
-              <a class="dropdown-item" href="#pablo">Action</a>
-              <a class="dropdown-item" href="#pablo">Another action</a>
-              <a class="dropdown-item" href="#pablo">Something else</a>
+              <a class="dropdown-item" href="#pablo">{{$t('dashboard.dropdown.action')}}</a>
+              <a class="dropdown-item" href="#pablo">{{$t('dashboard.dropdown.anotherAction')}}</a>
+              <a class="dropdown-item" href="#pablo">{{$t('dashboard.dropdown.somethingElse')}}</a>
             </base-dropdown>
           </template>
           <div class="table-full-width table-responsive">
@@ -113,7 +113,7 @@
       </div>
       <div class="col-lg-6 col-md-12">
         <card class="card" :header-classes="{'text-right': isRTL}">
-          <h4 slot="header" class="card-title"> Simple Table</h4>
+          <h4 slot="header" class="card-title">{{$t('dashboard.simpleTable')}}</h4>
           <div class="table-responsive">
             <user-table></user-table>
           </div>
@@ -149,7 +149,7 @@
           extraOptions: chartConfigs.purpleChartOptions,
           gradientColors: ['rgba(72,72,176,0.1)', 'rgba(72,72,176,0.0)', 'rgba(119,52,169,0)'],
           gradientStops: [1, 0.4, 0],
-          categories: ['Accounts', 'Purchases', 'Sessions']
+          categories: []
         },
         purpleLineChart: {
           extraOptions: chartConfigs.purpleChartOptions,
@@ -224,13 +224,16 @@
       },
       isRTL() {
         return this.$rtl.isRTL;
+      },
+      bigLineChartCategories() {
+        console.log(this.$t('dashboard'))
+        return this.$t('dashboard.chartCategories');
       }
     },
     methods: {
       initBigChart(index) {
         let chartData = {
           datasets: [{
-            label: "My First dataset",
             fill: true,
             borderColor: '#d346b1',
             borderWidth: 2,
