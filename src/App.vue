@@ -6,7 +6,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    if(!this.$rtl.isRTL) {
+      this.$rtl.disableRTL();
+    }
+  }
+};
 </script>
 
 <style lang="scss"></style>

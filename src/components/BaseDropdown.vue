@@ -14,7 +14,7 @@
         </span>
       </slot>
     </a>
-    <ul class="dropdown-menu" :class="{show:isOpen}">
+    <ul class="dropdown-menu" :class="[{show:isOpen}, {'dropdown-menu-right': menuOnRight}, menuClasses]">
       <slot></slot>
     </ul>
   </component>
@@ -29,7 +29,9 @@ export default {
     },
     title: String,
     icon: String,
-    titleClasses: [String, Object, Array]
+    titleClasses: [String, Object, Array],
+    menuClasses: [String, Object],
+    menuOnRight: Boolean
   },
   data() {
     return {

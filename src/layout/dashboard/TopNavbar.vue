@@ -33,44 +33,90 @@
             </button>
             <!-- You can choose types of search input -->
           </div>
+          <base-dropdown class="nav-item" menu-on-right>
+            <a slot="title" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="true">
+              <div class="notification d-none d-lg-block d-xl-block"></div>
+              <i class="tim-icons icon-sound-wave"></i>
+              <p class="d-lg-none">
+                New Notifications
+              </p>
+            </a>
+            <li class="nav-link">
+              <a href="#" class="nav-item dropdown-item">Mike John responded to your email</a>
+            </li>
+            <li class="nav-link">
+              <a href="#" class="nav-item dropdown-item">You have 5 more tasks</a>
+            </li>
+            <li class="nav-link">
+              <a href="#" class="nav-item dropdown-item">Your friend Michael is in town</a>
+            </li>
+            <li class="nav-link">
+              <a href="#" class="nav-item dropdown-item">Another notification</a>
+            </li>
+            <li class="nav-link">
+              <a href="#" class="nav-item dropdown-item">Another one</a>
+            </li>
+          </base-dropdown>
+          <base-dropdown class="nav-item" menu-classes="dropdown-navbar">
+            <a slot="title" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="true">
+              <div class="photo">
+                <img src="/img/anime3.png">
+              </div>
+              <b class="caret d-none d-lg-block d-xl-block"></b>
+              <p class="d-lg-none">
+                Log out
+              </p>
+            </a>
+            <li class="nav-link">
+              <a href="#" class="nav-item dropdown-item">Profile</a>
+            </li>
+            <li class="nav-link">
+              <a href="#" class="nav-item dropdown-item">Settings</a>
+            </li>
+            <div class="dropdown-divider"></div>
+            <li class="nav-link">
+              <a href="#" class="nav-item dropdown-item">Log out</a>
+            </li>
+          </base-dropdown>
         </ul>
       </div>
-    </div></nav>
+    </div>
+  </nav>
 </template>
 <script>
-export default {
-  computed: {
-    routeName() {
-      const { name } = this.$route;
-      return this.capitalizeFirstLetter(name);
+  export default {
+    computed: {
+      routeName() {
+        const { name } = this.$route;
+        return this.capitalizeFirstLetter(name);
+      },
+      isRTL() {
+        return this.$rtl.isRTL;
+      }
     },
-    isRTL() {
-      return this.$rtl.isRTL;
+    data() {
+      return {
+        activeNotifications: false
+      };
+    },
+    methods: {
+      capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      },
+      toggleNotificationDropDown() {
+        this.activeNotifications = !this.activeNotifications;
+      },
+      closeDropDown() {
+        this.activeNotifications = false;
+      },
+      toggleSidebar() {
+        this.$sidebar.displaySidebar(!this.$sidebar.showSidebar);
+      },
+      hideSidebar() {
+        this.$sidebar.displaySidebar(false);
+      }
     }
-  },
-  data() {
-    return {
-      activeNotifications: false
-    };
-  },
-  methods: {
-    capitalizeFirstLetter(string) {
-      return string.charAt(0).toUpperCase() + string.slice(1);
-    },
-    toggleNotificationDropDown() {
-      this.activeNotifications = !this.activeNotifications;
-    },
-    closeDropDown() {
-      this.activeNotifications = false;
-    },
-    toggleSidebar() {
-      this.$sidebar.displaySidebar(!this.$sidebar.showSidebar);
-    },
-    hideSidebar() {
-      this.$sidebar.displaySidebar(false);
-    }
-  }
-};
+  };
 </script>
 <style>
 </style>
