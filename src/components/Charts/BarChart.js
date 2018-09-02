@@ -21,37 +21,34 @@ export default {
       }
     }
   },
+  data() {
+    return {
+      ctx: null
+    };
+  },
   methods: {
-    updateGradients() {
-      const ctx = document.getElementById(this.chartId).getContext('2d');
+    updateGradients(chartData) {
+      if(!chartData) return;
+      const ctx = this.ctx || document.getElementById(this.chartId).getContext('2d');
       const gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
       gradientStroke.addColorStop(this.gradientStops[0], this.gradientColors[0]);
       gradientStroke.addColorStop(this.gradientStops[1], this.gradientColors[1]);
       gradientStroke.addColorStop(this.gradientStops[2], this.gradientColors[2]);
-      if(this.chartData){
-        this.chartData.datasets.forEach(set => {
-          set.backgroundColor = gradientStroke;
-        });
-      }
+      chartData.datasets.forEach(set => {
+        set.backgroundColor = gradientStroke;
+      });
     }
   },
   mounted() {
-    this.updateGradients();
-    this.renderChart(
-      this.chartData,
-      this.extraOptions
-    );
-  },
-  watch: {
-    chartData(newVal, oldVal) {
-      this.updateGradients();
-      if(oldVal === null) {
+    this.$watch('chartData', (newVal, oldVal) => {
+      this.updateGradients(this.chartData);
+      if (oldVal === null) {
         this.renderChart(
           this.chartData,
           this.extraOptions
         );
       }
-    }
+    }, { immediate: true });
   }
 };

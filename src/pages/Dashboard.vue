@@ -29,6 +29,7 @@
           </template>
           <div class="chart-area">
             <line-chart style="height: 100%"
+                        ref="bigChart"
                         :chart-data="bigLineChart.chartData"
                         :gradient-color="bigLineChart.gradientColors"
                         :gradient-stops="bigLineChart.gradientStops"
@@ -223,7 +224,7 @@
     },
     methods: {
       initBigChart(index) {
-        this.bigLineChart.chartData = {
+        let chartData = {
           datasets: [{
             label: "My First dataset",
             fill: true,
@@ -242,6 +243,8 @@
           }],
           labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
         }
+        this.$refs.bigChart.updateGradients(chartData);
+        this.bigLineChart.chartData = chartData;
         this.bigLineChart.activeIndex = index;
       }
     },
