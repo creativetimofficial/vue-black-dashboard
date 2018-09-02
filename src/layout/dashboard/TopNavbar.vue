@@ -24,7 +24,7 @@
       </button>
 
       <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto ">
+        <ul class="navbar-nav" :class="$rtl.isRTL ? 'mr-auto' : 'ml-auto'">
           <div class="search-bar input-group">
             <!-- <input type="text" class="form-control" placeholder="Search...">
             <div class="input-group-addon"><i class="tim-icons icon-zoom-split"></i></div> -->

@@ -17,11 +17,11 @@
     </button>
 
     <span v-if="icon" data-notify="icon" :class="['alert-icon', icon]"></span>
-    <span data-notify="message">
-      <span v-if="title" class="title"><b>{{title}}<br/></b></span>
-      <span v-if="message" v-html="message"></span>
+    <div data-notify="message">
+      <div v-if="title" class="title"><b>{{title}}<br/></b></div>
+      <div v-if="message" v-html="message"></div>
       <content-render v-if="!message && component" :component="component"></content-render>
-    </span>
+    </div>
   </div>
 </template>
 <script>

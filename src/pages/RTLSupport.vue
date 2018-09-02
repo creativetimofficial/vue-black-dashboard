@@ -1,16 +1,17 @@
 <template>
   <div>
+
     <div class="row">
       <div class="col-12">
-        <card type="chart">
+        <card type="chart" card-header-classes="text-left">
           <template slot="header">
             <div class="row">
-              <div class="col-sm-6 text-left">
+              <div class="col-sm-6 text-right">
                 <h5 class="card-category">Total Shipments</h5>
                 <h2 class="card-title">Performance</h2>
               </div>
               <div class="col-sm-6">
-                <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
                   <label v-for="(option, index) in bigLineChart.categories"
                          :key="option"
                          class="btn btn-sm btn-primary btn-simple"
@@ -39,10 +40,10 @@
     </div>
     <div class="row">
       <div class="col-lg-4">
-        <card type="chart">
+        <card type="chart" class="text-right">
           <template slot="header">
             <h5 class="card-category">Total Shipments</h5>
-            <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i> 763,215</h3>
+            <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary"></i> 763,215</h3>
           </template>
           <div class="chart-area">
             <line-chart style="height: 100%"
@@ -55,7 +56,7 @@
         </card>
       </div>
       <div class="col-lg-4">
-        <card type="chart">
+        <card type="chart" class="text-right">
           <template slot="header">
             <h5 class="card-category">Daily Sales</h5>
             <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info "></i> 3,500€</h3>
@@ -71,7 +72,7 @@
         </card>
       </div>
       <div class="col-lg-4">
-        <card type="chart">
+        <card type="chart" class="text-right">
           <template slot="header">
             <h5 class="card-category">Completed Tasks</h5>
             <h3 class="card-title"><i class="tim-icons icon-send text-success "></i> 12,100K</h3>
@@ -89,11 +90,11 @@
     </div>
     <div class="row">
       <div class="col-lg-6 col-md-12">
-        <card type="tasks">
+        <card type="tasks" class="text-right">
           <template slot="header">
             <h6 class="title d-inline">Tasks(5)</h6>
             <p class="card-category d-inline">today</p>
-            <div class="dropdown">
+            <div class="dropdown float-left">
               <button type="button" class="btn btn-link dropdown-toggle btn-icon" data-toggle="dropdown">
                 <i class="tim-icons icon-settings-gear-63"></i>
               </button>
@@ -110,16 +111,12 @@
         </card>
       </div>
       <div class="col-lg-6 col-md-12">
-        <div class="card ">
-          <div class="card-header">
-            <h4 class="card-title"> Simple Table</h4>
+        <card class="text-right">
+          <h4 slot="header" class="card-title"> Simple Table</h4>
+          <div class="table-responsive">
+            <user-table></user-table>
           </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <user-table></user-table>
-            </div>
-          </div>
-        </div>
+        </card>
       </div>
     </div>
   </div>
@@ -247,6 +244,9 @@
     mounted() {
       this.$rtl.enableRTL();
       this.initBigChart(0);
+    },
+    beforeDestroy() {
+      this.$rtl.disableRTL();
     }
   };
 </script>

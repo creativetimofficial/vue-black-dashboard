@@ -109,7 +109,8 @@
           icon: "tim-icons icon-bell-55",
           horizontalAlign: horizontalAlign,
           verticalAlign: verticalAlign,
-          type: this.type[color]
+          type: this.type[color],
+          timeout: 0
         });
       }
     }

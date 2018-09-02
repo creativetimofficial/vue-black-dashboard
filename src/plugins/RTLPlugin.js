@@ -17,8 +17,8 @@ export default {
         },
         disableRTL() {
           this.isRTL = false;
-          this.getDocClasses().add('rtl');
-          this.getDocClasses().add('menu-on-right');
+          this.getDocClasses().remove('rtl');
+          this.getDocClasses().remove('menu-on-right');
         }
       }
     });
