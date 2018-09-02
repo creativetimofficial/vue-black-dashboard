@@ -16,6 +16,7 @@
     "es6-promise": "^4.2.4",
     "vue": "^2.5.17",
     "vue-chartjs": "^3.4.0",
+    "vue-i18n": "^8.0.0",
     "vue-router": "^3.0.1",
     "vue2-transitions": "^0.2.3"
   },
@@ -26,17 +27,18 @@
     "@vue/eslint-config-prettier": "^3.0.0",
     "node-sass": "^4.8.3",
     "sass-loader": "^6.0.7",
+    "vue-cli-plugin-i18n": "^0.5.0",
     "vue-template-compiler": "^2.5.17"
-  },
-  "description": "A sample admin dashboard based on paper dashboard UI template",
-  "author": "cristian.jora <joracristi@gmail.com>",
-  "engines": {
-    "node": ">= 8.1.4",
-    "npm": ">= 5.0.0"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "description": "A sample admin dashboard based on paper dashboard UI template",
+  "author": "cristian.jora <joracristi@gmail.com>",
+  "engines": {
+    "node": ">= 8.1.4",
+    "npm": ">= 5.0.0"
+  }
 }
