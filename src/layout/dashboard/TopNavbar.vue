@@ -25,9 +25,9 @@
       </button>
 
       <collapse-transition>
-      <div class="collapse navbar-collapse show" v-show="showMenu">
+        <div class="collapse navbar-collapse show" v-show="showMenu">
           <ul class="navbar-nav" :class="$rtl.isRTL ? 'mr-auto' : 'ml-auto'">
-            <div class="search-bar input-group">
+            <div class="search-bar input-group" @click="searchModalVisible = true">
               <!-- <input type="text" class="form-control" placeholder="Search...">
               <div class="input-group-addon"><i class="tim-icons icon-zoom-split"></i></div> -->
               <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal">
@@ -35,6 +35,12 @@
               </button>
               <!-- You can choose types of search input -->
             </div>
+            <modal :show.sync="searchModalVisible"
+                   id="searchModal"
+                   :centered="false"
+                   :show-close="true">
+              <input slot="header" type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
+            </modal>
             <base-dropdown class="nav-item" menu-on-right>
               <a slot="title" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="true">
                 <div class="notification d-none d-lg-block d-xl-block"></div>
@@ -81,16 +87,19 @@
               </li>
             </base-dropdown>
           </ul>
-      </div>
+        </div>
       </collapse-transition>
     </div>
   </nav>
 </template>
 <script>
   import { CollapseTransition } from 'vue2-transitions';
+  import Modal from '@/components/Modal';
+
   export default {
     components: {
-      CollapseTransition
+      CollapseTransition,
+      Modal
     },
     computed: {
       routeName() {
@@ -104,7 +113,8 @@
     data() {
       return {
         activeNotifications: false,
-        showMenu: false
+        showMenu: false,
+        searchModalVisible: false
       };
     },
     methods: {
