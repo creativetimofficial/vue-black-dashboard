@@ -95,8 +95,8 @@
       <div class="col-lg-6 col-md-12">
         <card type="tasks" :header-classes="{'text-right': isRTL}">
           <template slot="header">
-            <h6 class="title d-inline">Tasks(5)</h6>
-            <p class="card-category d-inline">today</p>
+            <h6 class="title d-inline">{{$t('dashboard.tasks', {count: 5})}}</h6>
+            <p class="card-category d-inline">{{$t('dashboard.today')}}</p>
             <base-dropdown menu-on-right="" tag="div" :class="{'float-left': isRTL}">
               <base-button slot="title" type="link" icon class="dropdown-toggle">
                 <i class="tim-icons icon-settings-gear-63"></i>
@@ -226,7 +226,6 @@
         return this.$rtl.isRTL;
       },
       bigLineChartCategories() {
-        console.log(this.$t('dashboard'))
         return this.$t('dashboard.chartCategories');
       }
     },
@@ -256,13 +255,16 @@
       }
     },
     mounted() {
+      this.i18n = this.$i18n;
       if (this.enableRTL) {
+        this.i18n.locale = 'ar';
         this.$rtl.enableRTL();
       }
       this.initBigChart(0);
     },
     beforeDestroy() {
       if (this.$rtl.isRTL) {
+        this.i18n.locale = 'en';
         this.$rtl.disableRTL();
       }
     }
