@@ -2,7 +2,7 @@ const markdownParser = require('./markdownParser')
 const path = require('path');
 
 module.exports = {
-  base: process.env.NODE_ENV ? '/vue-argon-design-system/documentation/' : '',
+  base: process.env.NODE_ENV ? '/vue-black-dashboard/documentation/' : '',
   markdown: {
     config: markdownParser
   },
