@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <side-bar>
+    <side-bar :background-color="backgroundColor">
       <template slot="links">
         <sidebar-link to="/dashboard" :name="$t('sidebar.dashboard')" icon="tim-icons icon-chart-pie-36"/>
         <sidebar-link to="/icons" :name="$t('sidebar.icons')" icon="tim-icons icon-atom"/>
@@ -12,7 +12,9 @@
         <sidebar-link to="/dashboard?enableRTL=true" :name="$t('sidebar.rtlSupport')" icon="tim-icons icon-world"/>
       </template>
     </side-bar>
-    <div class="main-panel">
+    <sidebar-share :background-color.sync="backgroundColor">
+    </sidebar-share>
+    <div class="main-panel" :data="backgroundColor">
       <top-navbar></top-navbar>
 
       <dashboard-content @click.native="toggleSidebar">
@@ -30,12 +32,19 @@ import TopNavbar from "./TopNavbar.vue";
 import ContentFooter from "./ContentFooter.vue";
 import DashboardContent from "./Content.vue";
 import MobileMenu from "./MobileMenu";
+import SidebarShare from "./SidebarSharePlugin";
 export default {
   components: {
     TopNavbar,
     ContentFooter,
     DashboardContent,
-    MobileMenu
+    MobileMenu,
+    SidebarShare
+  },
+  data() {
+    return {
+      backgroundColor: "black"
+    };
   },
   methods: {
     toggleSidebar() {
