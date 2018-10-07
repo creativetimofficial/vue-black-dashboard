@@ -50,35 +50,7 @@ Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightb
 
             <template slot="footer">
                 <base-button type="primary">Save changes</base-button>
-                <base-button type="link" class="ml-auto" @click="modals.modal1 = false">Close
-                </base-button>
-            </template>
-        </modal>
-    </div>
-    <div class="col-md-4">
-        <base-button block type="warning" class=" mb-3" @click="modals.modal2 = true">
-            Notification
-        </base-button>
-
-        <modal :show.sync="modals.modal2"
-               gradient="danger"
-               modal-classes="modal-danger modal-dialog-centered">
-            <h6 slot="header" class="modal-title" id="modal-title-notification">Your attention is required</h6>
-
-            <div class="py-3 text-center">
-                <i class="ni ni-bell-55 ni-3x"></i>
-                <h4 class="heading mt-4">You should read this!</h4>
-                <p>A small river named Duden flows by their place and supplies it with the
-                    necessary regelialia.</p>
-            </div>
-
-            <template slot="footer">
-                <base-button type="white">Ok, Got it</base-button>
-                <base-button type="link"
-                             text-color="white"
-                             class="ml-auto"
-                             @click="modals.modal2 = false">
-                    Close
+                <base-button type="secondary" class="ml-auto" @click="modals.modal1 = false">Close
                 </base-button>
             </template>
         </modal>
@@ -91,21 +63,21 @@ Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightb
         <modal :show.sync="modals.modal3"
                body-classes="p-0"
                modal-classes="modal-dialog-centered modal-sm">
-            <card type="secondary" shadow
+            <card type="secondary"
                   header-classes="bg-white pb-5"
                   body-classes="px-lg-5 py-lg-5"
-                  class="border-0">
+                  class="border-0 mb-0">
                 <template>
                     <div class="text-muted text-center mb-3">
                         <small>Sign in with</small>
                     </div>
                     <div class="btn-wrapper text-center">
-                        <base-button type="neutral">
+                        <base-button type="default">
                             <img slot="icon" src="https://demos.creative-tim.com/argon-design-system/assets/img/icons/common/github.svg">
                             Github
                         </base-button>
 
-                        <base-button type="neutral">
+                        <base-button type="danger">
                             <img slot="icon" src="https://demos.creative-tim.com/argon-design-system/assets/img/icons/common/google.svg">
                             Google
                         </base-button>

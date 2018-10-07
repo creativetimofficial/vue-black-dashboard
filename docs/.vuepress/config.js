@@ -50,7 +50,7 @@ module.exports = {
         '/components/forms',
         '/components/google-maps',
         '/components/modal',
-        '/components/navbar',
+        // '/components/navbar',
         '/components/nucleo-icons',
         '/components/tables',
         '/components/typography',
