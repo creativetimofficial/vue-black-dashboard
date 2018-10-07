@@ -1,5 +1,6 @@
 $box-shadow: 0 10px 20px -8px rgba(0,0,0,.15);
 $border-color: rgba(0,0,0,.05);
+$primary: #e14eca;
 $orange: #fb6340;
 .ct-documentation {
   table {
@@ -7,17 +8,25 @@ $orange: #fb6340;
     box-shadow: $box-shadow;
     display: table;
     margin: 0;
+    border-top: none;
   }
   th {
     padding: 10px;
-    border: 1px solid rgba(0,0,0,.05);
-    background: #fafafa;
+    border: none;
   }
   tr {
-    border-top: 1px solid #dfe2e5;
+    border-top: 1px solid hsla(0,0%,100%,.1);
   }
-  td {
-    border: 1px solid rgba(0,0,0,.05)
+  thead tr {
+    border-top: none;
+  }
+  tr:nth-child(2n) {
+    background: transparent;
+  }
+  table.table thead tr th,
+  table.table tbody tr td {
+    border: none;
+    color: hsla(0,0%,100%,.7) !important;
   }
 
 
@@ -40,7 +49,7 @@ $orange: #fb6340;
 
   h1, h2, h3 {
     padding-left: 1.25rem;
-    border-left: 2px solid #5e72e4;
+    border-left: 2px solid $primary;
     padding-top: 12px !important;
     padding-bottom: 0 !important;
     border-bottom: 0;

@@ -24,6 +24,7 @@
   "description": "Tagup component docs",
   "dependencies": {
     "element-ui": "^2.4.0",
-    "nprogress": "^0.2.0"
+    "nprogress": "^0.2.0",
+    "vue-clipboard2": "^0.2.1"
   }
 }

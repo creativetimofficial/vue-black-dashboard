@@ -1,8 +1,9 @@
 import DemoBlock from './demo-block/demo-block'
 import * as Components from '@/components/index'
 import Dashboard from '@/plugins/blackDashboard'
-import './doc_styles.scss'
+import VueClipboard from 'vue-clipboard2'
 import './docs.css'
+import './doc_styles.scss'
 import getElements from './utils/get-sidebar-elements';
 
 export default ({
@@ -12,6 +13,7 @@ export default ({
                   siteData
                 }) => {
   Vue.use(Dashboard)
+  Vue.use(VueClipboard);
   Vue.component('demo-block', DemoBlock);
   let componentEntries = Object.entries(Components);
   for(let [name, component] of componentEntries) {

@@ -1,6 +1,6 @@
 <template>
-  <div class="props-table__wrapper">
-    <table v-if="hasProps">
+  <div class="props-table__wrapper bd-example">
+    <table class="table" v-if="hasProps">
       <thead>
       <tr>
         <th class="prop-col">Prop Name</th>

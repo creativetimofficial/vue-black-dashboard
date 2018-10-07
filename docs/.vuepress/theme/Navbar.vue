@@ -72,6 +72,7 @@
     },
     mounted() {
       document.body.classList.add('white-content');
+      document.body.classList.add('bd-docs');
     }
   }
 </script>

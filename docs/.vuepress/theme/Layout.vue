@@ -1,6 +1,7 @@
 <template>
-    <div class="theme-container ct-documentation white-content">
+    <div class="theme-container ct-documentation">
         <Navbar></Navbar>
+        <notifications></notifications>
         <div
                 class="sidebar-mask"
                 @click="toggleSidebar(false)"

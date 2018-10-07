@@ -1345,8 +1345,8 @@ body.creativetim .partner.mdbootstrap, body.mdbootstrap .partner.creativetim, bo
 
 .btn-clipboard {
   position: absolute;
-  top: .5rem;
-  right: .5rem;
+  top: 1.9rem;
+  right: 4rem;
   z-index: 10;
   display: block;
   padding: .25rem .5rem;

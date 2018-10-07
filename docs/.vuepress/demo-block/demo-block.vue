@@ -1,6 +1,6 @@
 <template>
   <div
-    class="demo-block"
+    class="demo-block bd-example"
     :class="[blockClass, { 'hover': hovering }]"
     @mouseenter="hovering = true"
     @mouseleave="hovering = false">
@@ -24,7 +24,7 @@
         <i :class="[iconClass, { 'hovering': hovering }]"></i>
       </transition>
       <transition name="text-slide">
-        <span class="showText" v-show="hovering">{{ controlText }}</span>
+        <span class="showText">{{ controlText }}</span>
       </transition>
     </div>
   </div>
@@ -61,12 +61,10 @@
         this.scrollParent && this.scrollParent.removeEventListener('scroll', this.scrollHandler);
       },
       doCopy () {
-        let html = this.$el.querySelector('.raw-code').innerHTML;
+        let html = this.$el.querySelector('.raw-code').innerText;
         this.$copyText(html).then((e) => {
-          alert('Copied')
-          console.log(e)
+          this.$notify('Copied to clipboard')
         }, (e) => {
-          alert('Can not copy')
           console.log(e)
         })
       }
@@ -86,7 +84,7 @@
       },
 
       controlText() {
-        return this.isExpanded ? 'Hide' : 'Show';
+        return this.isExpanded ? 'Hide' : 'Show Code';
       },
 
       codeArea() {
@@ -136,7 +134,6 @@
 </script>
 <style lang="scss">
   .demo-block {
-    border: solid 1px #ebebeb;
     border-radius: 3px;
     transition: .2s;
 
@@ -160,8 +157,6 @@
       position: relative;
     }
     .meta {
-      background-color: #fafafa;
-      border-top: solid 1px #eaeefb;
       height: 0;
       transition: height .2s;
       overflow: scroll;
@@ -169,6 +164,10 @@
 
 
     .highlight {
+      background: transparent;
+      >div {
+        box-shadow: 0 4px 8px -4px rgba(0, 0, 0, .2);
+      }
       pre {
         margin: 0;
       }
@@ -186,10 +185,8 @@
     }
 
     .demo-block-control {
-      border-top: solid 1px #eaeefb;
       height: 44px;
       box-sizing: border-box;
-      background-color: #fff;
       border-bottom-left-radius: 4px;
       border-bottom-right-radius: 4px;
       text-align: center;
@@ -227,7 +224,6 @@
 
       &:hover {
         color: #409EFF;
-        background-color: #f9fafc;
       }
 
       & .text-slide-enter,

@@ -21,7 +21,8 @@ module.exports = {
       )
   },
   head: [
-    ['link', { rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" }],
+    ['link', { rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" }],
+    ['link', { rel: 'stylesheet', href: "https://use.fontawesome.com/releases/v5.0.6/css/all.css" }],
   ],
   themeConfig: {
     sidebarDepth: 1,
@@ -44,24 +45,24 @@ module.exports = {
         '/components/alerts',
         '/components/badges',
         '/components/buttons',
-        '/components/carousel',
+        '/components/cards',
         '/components/dropdowns',
         '/components/forms',
+        '/components/google-maps',
         '/components/modal',
-        '/components/tabs',
         '/components/navbar',
-        '/components/pagination',
-        '/components/popovers',
-        '/components/progress',
-        '/components/tooltips',
+        '/components/nucleo-icons',
+        '/components/tables',
+        '/components/typography',
       ]
     },
     {
       title: 'Plugins',
       collapsable: false,
       children: [
-        // '/components/plugin_datepicker',
-        // '/components/plugin_slider',
+        '/components/plugin-perfect-scrollbar',
+        '/components/plugin-chartjs',
+        '/components/plugin-notify',
       ]
     }
     ],
