@@ -60,7 +60,7 @@ module.exports = {
       title: 'Plugins',
       collapsable: false,
       children: [
-        '/components/plugin-perfect-scrollbar',
+        //'/components/plugin-perfect-scrollbar',
         '/components/plugin-chartjs',
         '/components/plugin-notify',
       ]

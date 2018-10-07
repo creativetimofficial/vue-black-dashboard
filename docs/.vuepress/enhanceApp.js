@@ -1,5 +1,7 @@
 import DemoBlock from './demo-block/demo-block'
 import * as Components from '@/components/index'
+import LineChart from '@/components/Charts/LineChart'
+import BarChart from '@/components/Charts/BarChart'
 import Dashboard from '@/plugins/blackDashboard'
 import VueClipboard from 'vue-clipboard2'
 import './docs.css'
@@ -15,6 +17,8 @@ export default ({
   Vue.use(Dashboard)
   Vue.use(VueClipboard);
   Vue.component('demo-block', DemoBlock);
+  Vue.component(LineChart.name, LineChart);
+  Vue.component(BarChart.name, BarChart);
   let componentEntries = Object.entries(Components);
   for(let [name, component] of componentEntries) {
     Vue.component(component.name || name, component)
