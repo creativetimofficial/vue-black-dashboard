@@ -16,9 +16,9 @@
 </template>
 <script>
   export default {
-    name: 'base-checkbox',
+    name: "base-checkbox",
     model: {
-      prop: 'checked'
+      prop: "checked"
     },
     props: {
       checked: [Array, Boolean],

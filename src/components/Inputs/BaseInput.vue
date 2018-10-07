@@ -1,5 +1,9 @@
 <template>
-  <div class="form-group" :class="{'input-group': hasIcon}">
+  <div class="form-group"
+       :class="{
+          'input-group': hasIcon,
+          'input-group-focus': focused
+       }">
     <slot name="label">
       <label v-if="label" class="control-label">
         {{label}}
@@ -7,38 +11,71 @@
     </slot>
     <slot name="addonLeft">
       <span v-if="addonLeftIcon" class="input-group-prepend">
-        <i :class="addonLeftIcon" class="input-group-text"></i>
+        <div class="input-group-text">
+          <i :class="addonLeftIcon"></i>
+        </div>
       </span>
     </slot>
     <slot>
       <input
         :value="value"
-        @input="$emit('input',$event.target.value)"
         v-bind="$attrs"
+        v-on="listeners"
         class="form-control"
         aria-describedby="addon-right addon-left">
     </slot>
     <slot name="addonRight">
       <span v-if="addonRightIcon" class="input-group-append">
-        <i :class="addonRightIcon" class="input-group-text"></i>
+        <div class="input-group-text">
+          <i :class="addonRightIcon"></i>
+        </div>
       </span>
     </slot>
+    <slot name="helperText"></slot>
   </div>
 </template>
 <script>
   export default {
     inheritAttrs: false,
-    name: "fg-input",
+    name: "base-input",
     props: {
       label: String,
       value: [String, Number],
       addonRightIcon: String,
       addonLeftIcon: String
     },
+    model: {
+      prop: 'value',
+      event: 'input'
+    },
+    data() {
+      return {
+        focused: false
+      }
+    },
     computed: {
       hasIcon() {
         const { addonRight, addonLeft } = this.$slots;
         return addonRight !== undefined || addonLeft !== undefined || this.addonRightIcon !== undefined || this.addonLeftIcon !== undefined;
+      },
+      listeners() {
+        return {
+          ...this.$listeners,
+          input: this.onInput,
+          blur: this.onBlur,
+          focus: this.onFocus
+        }
+      }
+    },
+    methods: {
+      onInput(evt) {
+        this.$emit('input', evt.target.value)
+      },
+      onFocus() {
+        this.focused = true;
+      },
+      onBlur() {
+        this.focused = false;
       }
     }
   }

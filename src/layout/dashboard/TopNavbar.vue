@@ -41,7 +41,7 @@
                    :show-close="true">
               <input slot="header" type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
             </modal>
-            <base-dropdown class="nav-item" menu-on-right>
+            <base-dropdown tag="li" title-tag="a" class="nav-item" menu-on-right>
               <a slot="title" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="true">
                 <div class="notification d-none d-lg-block d-xl-block"></div>
                 <i class="tim-icons icon-sound-wave"></i>
@@ -65,7 +65,7 @@
                 <a href="#" class="nav-item dropdown-item">Another one</a>
               </li>
             </base-dropdown>
-            <base-dropdown class="nav-item" menu-classes="dropdown-navbar">
+            <base-dropdown tag="li" title-tag="a" class="nav-item" menu-classes="dropdown-navbar">
               <a slot="title" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="true">
                 <div class="photo">
                   <img src="/img/anime3.png">

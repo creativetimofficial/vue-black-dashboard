@@ -1,18 +1,20 @@
 <template>
   <component
     :is="tag"
-    :type="nativeType"
+    :type="tag === 'button' ? nativeType : ''"
     :disabled="disabled || loading"
     @click="handleClick"
     class="btn"
     :class="[
       {'btn-round': round},
       {'btn-block': block},
-      {'btn-icon': icon},
+      {'btn-icon btn-fab': icon},
       {[`btn-${type}`]: type && !outline},
       {[`btn-outline-${type}`]: type && outline},
       {[`btn-${size}`]: size},
-      {'btn-link': simple}
+      {'btn-simple': simple},
+      {'btn-link': link},
+      {'disabled': disabled && tag !== 'button'}
     ]">
     <slot name="loading">
       <i v-if="loading" class="fa fa-spinner fa-spin"></i>
@@ -46,7 +48,8 @@ export default {
       type: String,
       default: ""
     },
-    simple: Boolean
+    simple: Boolean,
+    link: Boolean,
   },
   methods: {
     handleClick(evt) {

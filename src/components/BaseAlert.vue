@@ -19,7 +19,7 @@
   import { FadeTransition } from 'vue2-transitions';
 
   export default {
-    name: 'alert',
+    name: 'base-alert',
     components: {
       FadeTransition
     },

@@ -1,11 +1,11 @@
 <template>
   <table class="table tablesorter" :class="tableClass">
     <thead :class="theadClasses">
-    <slot name="columns">
-      <tr>
+    <tr>
+      <slot name="columns">
         <th v-for="column in columns" :key="column">{{column}}</th>
-      </tr>
-    </slot>
+      </slot>
+    </tr>
     </thead>
     <tbody :class="tbodyClasses">
     <tr v-for="(item, index) in data" :key="index">

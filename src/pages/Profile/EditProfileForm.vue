@@ -3,69 +3,69 @@
     <h5 slot="header" class="title">Edit Profile</h5>
     <div class="row">
       <div class="col-md-5 pr-md-1">
-        <fg-input label="Company (disabled)"
+        <base-input label="Company (disabled)"
                   placeholder="Company"
                   v-model="model.company"
                   disabled>
-        </fg-input>
+        </base-input>
       </div>
       <div class="col-md-3 px-md-1">
-        <fg-input label="Username"
+        <base-input label="Username"
                   placeholder="Username"
                   v-model="model.username">
-        </fg-input>
+        </base-input>
       </div>
       <div class="col-md-4 pl-md-1">
-        <fg-input label="Email address"
+        <base-input label="Email address"
                   type="email"
                   placeholder="mike@email.com">
-        </fg-input>
+        </base-input>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6 pr-md-1">
-        <fg-input label="First Name"
+        <base-input label="First Name"
                   v-model="model.firstName"
                   placeholder="First Name">
-        </fg-input>
+        </base-input>
       </div>
       <div class="col-md-6 pl-md-1">
-        <fg-input label="Last Name"
+        <base-input label="Last Name"
                   v-model="model.lastName"
                   placeholder="Last Name">
-        </fg-input>
+        </base-input>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        <fg-input label="Address"
+        <base-input label="Address"
                   v-model="model.address"
                   placeholder="Home Address">
-        </fg-input>
+        </base-input>
       </div>
     </div>
     <div class="row">
       <div class="col-md-4 pr-md-1">
-        <fg-input label="City"
+        <base-input label="City"
                   v-model="model.city"
                   placeholder="City">
-        </fg-input>
+        </base-input>
       </div>
       <div class="col-md-4 px-md-1">
-        <fg-input label="Country"
+        <base-input label="Country"
                   v-model="model.country"
                   placeholder="Country">
-        </fg-input>
+        </base-input>
       </div>
       <div class="col-md-4 pl-md-1">
-        <fg-input label="Postal Code"
+        <base-input label="Postal Code"
                   placeholder="ZIP Code">
-        </fg-input>
+        </base-input>
       </div>
     </div>
     <div class="row">
       <div class="col-md-8">
-        <fg-input>
+        <base-input>
           <label>About Me</label>
           <textarea rows="4" cols="80"
                     class="form-control"
@@ -73,7 +73,7 @@
                     v-model="model.about">
 
               </textarea>
-        </fg-input>
+        </base-input>
       </div>
     </div>
     <base-button slot="footer" type="primary" fill>Save</base-button>

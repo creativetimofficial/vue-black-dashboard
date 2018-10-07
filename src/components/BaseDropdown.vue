@@ -4,17 +4,19 @@
              :class="{show:isOpen}"
              @click="toggleDropDown"
              v-click-outside="closeDropDown">
-    <a class="dropdown-toggle btn-rotate"
-       :class="titleClasses"
-       :aria-expanded="isOpen"
-       data-toggle="dropdown">
-      <slot name="title">
-        <i :class="icon"></i>
-        <span class="notification">{{title}}
-          <b class="caret"></b>
-        </span>
-      </slot>
-    </a>
+    <slot name="title-container" :is-open="isOpen">
+      <component
+        :is="titleTag"
+        class="dropdown-toggle btn-rotate"
+        :class="titleClasses"
+        :aria-expanded="isOpen"
+        data-toggle="dropdown">
+        <slot name="title" :is-open="isOpen">
+          <i :class="icon"></i>
+          {{title}}
+        </slot>
+      </component>
+    </slot>
     <ul class="dropdown-menu" :class="[{show:isOpen}, {'dropdown-menu-right': menuOnRight}, menuClasses]">
       <slot></slot>
     </ul>
@@ -22,11 +24,15 @@
 </template>
 <script>
 export default {
-  name: 'base-dropdown',
+  name: "base-dropdown",
   props: {
     tag: {
       type: String,
-      default: "li"
+      default: "div"
+    },
+    titleTag: {
+      type: String,
+      default: "button"
     },
     title: String,
     icon: String,
