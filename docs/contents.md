@@ -1,88 +1,116 @@
 # Contents
 
 Discover what’s included in Bootstrap, including our precompiled and source code flavors.
-Remember, Bootstrap’s JavaScript components require Bootstrap Vue.
 
 <hr>
 
-#### Argon Structure
+#### Vue Black Dashboard Structure
 
 Once downloaded, unzip the compressed folder and you’ll see something like this:
 
-```
-|-- src
-    |-- App.vue
-    |-- main.js
-    |-- router.js
-    |-- starterRouter.js
-    |-- assets
-    |   |-- scss
-    |   |   |-- argon.scss
-    |   |   |-- bootstrap
-    |   |   |-- custom
-    |   |-- vendor
-    |-- components
-    |   |-- Badge.vue
-    |   |-- BaseAlert.vue
-    |   |-- BaseButton.vue
-    |   |-- BaseCheckbox.vue
-    |   |-- BaseInput.vue
-    |   |-- BaseNav.vue
-    |   |-- BasePagination.vue
-    |   |-- BaseProgress.vue
-    |   |-- BaseRadio.vue
-    |   |-- BaseSlider.vue
-    |   |-- BaseSwitch.vue
-    |   |-- Card.vue
-    |   |-- CloseButton.vue
-    |   |-- Icon.vue
-    |   |-- Modal.vue
-    |   |-- NavbarToggleButton.vue
-    |   |-- index.js
-    |   |-- Tabs
-    |       |-- PillsLayout.vue
-    |       |-- Tab.vue
-    |       |-- TabPane.vue
-    |       |-- Tabs.vue
-    |       |-- TabsLayout.vue
-    |-- layout
-    |   |-- AppFooter.vue
-    |   |-- AppHeader.vue
-    |   |-- starter
-    |       |-- StarterFooter.vue
-    |       |-- StarterHeader.vue
-    |-- plugins
-    |   |-- argon-kit.js
-    |   |-- globalComponents.js
-    |   |-- globalDirectives.js
-    |-- views
-        |-- Components.vue
-        |-- Landing.vue
-        |-- Login.vue
-        |-- Profile.vue
-        |-- Register.vue
-        |-- Starter.vue
+```markdown
+|-- Vue Black Dashboard
+    |-- .babelrc  
+    |-- .env
+    |-- .eslintrc
+    |-- .gitattributes
+    |-- .gitignore
+    |-- CHANGELOG.md
+    |-- CONTRIBUTING.md
+    |-- LICENSE.md
+    |-- README.md
+    |-- package.json
+    |-- vue.config.js
+    |-- src
+        |-- App.vue
+        |-- i18n.js
+        |-- main.js
+        |-- assets
+        |   |-- css
+        |   |   |-- nucleo-icons.css
+        |   |-- demo
+        |   |   |-- demo.css
+        |   |-- fonts
+        |   |   |-- nucleo.eot
+        |   |   |-- nucleo.ttf
+        |   |   |-- nucleo.woff
+        |   |   |-- nucleo.woff2
+        |   |-- sass
+        |       |-- black-dashboard.scss
+        |       |-- black-dashboard
+        |           |-- bootstrap
+        |           |-- custom
+        |           |-- plugins
         |-- components
-            |-- BasicElements.vue
-            |-- Carousel.vue
-            |-- CustomControls.vue
-            |-- DownloadSection.vue
-            |-- Examples.vue
-            |-- Hero.vue
-            |-- Icons.vue
-            |-- Inputs.vue
-            |-- JavascriptComponents.vue
-            |-- Navigation.vue
-            |-- JavascriptComponents
-                |-- DatePickers.vue
-                |-- Images.vue
-                |-- Modals.vue
-                |-- ProgressPagination.vue
-                |-- TabsSection.vue
-                |-- Tooltips.vue
-                |-- Typography.vue
-```
+        |   |-- BaseAlert.vue
+        |   |-- BaseButton.vue
+        |   |-- BaseCheckbox.vue
+        |   |-- BaseDropdown.vue
+        |   |-- BaseNav.vue
+        |   |-- BaseTable.vue
+        |   |-- CloseButton.vue
+        |   |-- Modal.vue
+        |   |-- NavbarToggleButton.vue
+        |   |-- index.js
+        |   |-- Cards
+        |   |   |-- Card.vue
+        |   |   |-- StatsCard.vue
+        |   |-- Charts
+        |   |   |-- BarChart.js
+        |   |   |-- LineChart.js
+        |   |   |-- config.js
+        |   |   |-- utils.js
+        |   |-- Inputs
+        |   |   |-- formGroupInput.vue
+        |   |-- NotificationPlugin
+        |   |   |-- Notification.vue
+        |   |   |-- Notifications.vue
+        |   |   |-- index.js
+        |   |-- SidebarPlugin
+        |       |-- SideBar.vue
+        |       |-- SidebarLink.vue
+        |       |-- index.js
+        |-- directives
+        |   |-- click-ouside.js
+        |-- layout
+        |   |-- dashboard
+        |       |-- Content.vue
+        |       |-- ContentFooter.vue
+        |       |-- DashboardLayout.vue
+        |       |-- MobileMenu.vue
+        |       |-- SidebarSharePlugin.vue
+        |       |-- TopNavbar.vue
+        |-- locales
+        |   |-- ar.json
+        |   |-- en.json
+        |-- pages
+        |   |-- Dashboard.vue
+        |   |-- Icons.vue
+        |   |-- Maps.vue
+        |   |-- NotFoundPage.vue
+        |   |-- Notifications.vue
+        |   |-- Profile.vue
+        |   |-- TableList.vue
+        |   |-- Typography.vue
+        |   |-- Dashboard
+        |   |   |-- TaskList.vue
+        |   |   |-- UserTable.vue
+        |   |-- Notifications
+        |   |   |-- NotificationTemplate.vue
+        |   |-- Profile
+        |       |-- EditProfileForm.vue
+        |       |-- UserCard.vue
+        |-- plugins
+        |   |-- RTLPlugin.js
+        |   |-- blackDashboard.js
+        |   |-- globalComponents.js
+        |   |-- globalDirectives.js
+        |   |-- liveDemo.js
+        |-- router
+            |-- index.js
+            |-- routes.js
 
+```
 
 #### Bootstrap components
 
@@ -150,7 +178,7 @@ Here is the list of Bootstrap 4 components that were restyled in Argon:
   </div>
 </div>
 
-#### Argon components
+#### Vue Black Dashboard components
 
 Besides giving the existing Bootstrap elements a new look, we added new ones, so that the interface and consistent and homogenous. Going through them, we added:
 
@@ -158,17 +186,17 @@ Besides giving the existing Bootstrap elements a new look, we added new ones, so
     <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Datepicker</h6>
+        <h6 class="mb-0">Sidebar</h6>
       </div>
     </div>
     </div>
     <div class="col-md-3">
-    <div class="card shadow-sm">
-      <div class="p-4 text-center">
-        <h6 class="mb-0">Sliders</h6>
+        <div class="card shadow-sm">
+          <div class="p-4 text-center">
+            <h6 class="mb-0">Custom Inputs</h6>
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
     <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
@@ -179,7 +207,7 @@ Besides giving the existing Bootstrap elements a new look, we added new ones, so
     <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Radio buttons</h6>
+        <h6 class="mb-0">Notifications</h6>
       </div>
     </div>
     </div>
@@ -189,7 +217,7 @@ Besides giving the existing Bootstrap elements a new look, we added new ones, so
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Toggle buttons</h6>
+        <h6 class="mb-0">Charts</h6>
       </div>
     </div>
   </div>
@@ -210,7 +238,7 @@ Besides giving the existing Bootstrap elements a new look, we added new ones, so
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Modals</h6>
+        <h6 class="mb-0">Cards</h6>
       </div>
     </div>
   </div>

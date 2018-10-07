@@ -1,6 +1,6 @@
-## Argon - Design System
+## Vue Black Dashboard
 
-**An user-friendly, open source and beautiful design system based on Bootstrap 4.**
+**Black Dashboard is a free Vue.js and Bootstrap 4 Admin Template.**
 
 <hr>
 
@@ -13,7 +13,7 @@ We at Creative Tim have always wanted to deliver great tools to all the web deve
       <i class="ni ni-html5"></i>
     </div>
     <h6>Developer First</h6>
-    <p class="description">Argon Design System is a "Developer First" product, with a lot of variables for colors, fonts, sizes and other elements.</p>
+    <p class="description">Vue Black Dashboard is a "Developer First" product, with a lot of variables for colors, fonts, sizes and other elements.</p>
   </div>
   <div class="col-md-4">
     <div class="icon icon-shape bg-gradient-danger rounded-circle text-white mb-3">
@@ -27,8 +27,8 @@ We at Creative Tim have always wanted to deliver great tools to all the web deve
       <i class="ni ni-favourite-28"></i>
     </div>
     <h6>Community helpers</h6>
-    <p class="description">Since all our products are built on top of Open Source also Argon Design System is released under
-      <a href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md">MIT License</a>.</p>
+    <p class="description">Since all our products are built on top of Open Source also Vue Black Dashboard is released under
+      <a href="https://github.com/creativetimofficial/vue-black-dashboard/blob/master/LICENSE.md">MIT License</a>.</p>
   </div>
 </div>
 
@@ -40,11 +40,7 @@ This Design System is fully coded and built on top of Open Source, more details 
 - [Vue](http://vuejs.org/) - The Progressive JavaScript Framework
 - [Vue CLI](https://cli.vuejs.org/) - 🛠️ Standard Tooling for Vue.js Development
 - [Vue Router](https://router.vuejs.org/) - Router for Vue.js
-- [noUISlider](https://refreshless.com/nouislider/) - JavaScript Range Slider</li>
-- [Open Sans Font](https://fonts.google.com/specimen/Open+Sans) - Google’s Open Source typefaces
-- [Stripe Elements](https://github.com/stripe/elements-examples/#example-1) - Forms, Buttons and Elements
-- [Bootstrap Vue](https://bootstrap-vue.js.org/) - Vue components for Bootstrap 4
-- [Flatpickr](https://flatpickr.js.org/) - Lightweight, powerful javascript date picker
+- [Poppins Font](https://fonts.google.com/specimen/Poppins) - Google’s Open Source typefaces
 - [WebGradients](https://webgradients.com/) - A curated collection of splendid gradients made in CSS3
 
 #### Learn more

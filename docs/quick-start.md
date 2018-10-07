@@ -13,14 +13,14 @@ project.
 4. Run `npm run serve` or `yarn serve` to start the local development server and start prototyping.
 
 
-#### Argon Kit
+#### Vue Black Dashboard
 
-Argon Kit is built as Vue plugin so you can simply import it and use it.
+Vue Black Dashboard is built as Vue plugin so you can simply import it and use it.
 
 ```js
 import Vue from 'vue';
-import Argon from '@/plugins/argon-kit'
-Vue.use(Argon);
+import DashboardPlugin from '@/plugins/blackDashboard'
+Vue.use(DashboardPlugin);
 ```
 
 #### Global Components
@@ -30,18 +30,11 @@ it's easier to use them across the app without importing them each time.
 
 Here's the list of global components:
 
-- **Badge**
-- **BaseAlert**
 - **BaseButton**
 - **BaseCheckbox**
-- **BaseInput**
-- **BasePagination**
-- **BaseProgress**
-- **BaseRadio**
-- **BaseSlider**
-- **BaseSwitch**
+- **BaseDropdown**
 - **Card**
-- **Icon**
+- **FormGroupInput**
 
 #### Local components
 
@@ -50,12 +43,18 @@ and bigger. In order to not affect the overall bundle size of the Argon Kit, the
 
 Here's the list of local components:
 
+- **BarChart**
+- **BaseAlert**
 - **BaseNav**
+- **BaseTable**
 - **CloseButton**
+- **LineChart**
 - **Modal**
 - **NavbarToogleButton**
-- **Tabs**
-- **TabPane**
+- **Notifications**
+- **StatsCard**
+- **Sidebar**
+- **SidebarLink**
 
 #### Starter template
 
