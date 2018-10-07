@@ -1,5 +1,5 @@
-/*!
 
+/*
  =========================================================
  * Black Dashboard - v1.0.0
  =========================================================
@@ -7,7 +7,6 @@
  * Product Page: https://www.creative-tim.com/product/black-dashboard
  * Copyright 2018 Creative Tim (http://www.creative-tim.com)
 
- * Designed by www.invisionapp.com Coded by www.creative-tim.com
 
  =========================================================
 
@@ -15,42 +14,86 @@
 
  */
 
-@import 'black-dashboard/variables';
-@import 'black-dashboard/mixins';
+ // Core
 
-// Plugins CSS
-@import "black-dashboard/plugins/plugin-animate-bootstrap-notify";
-@import "black-dashboard/plugins/plugin-perfect-scrollbar";
+@import "black-dashboard/custom/functions";
+@import "black-dashboard/bootstrap/functions";
 
-// Core CSS
-@import "black-dashboard/buttons";
-@import "black-dashboard/inputs";
-@import "black-dashboard/typography";
-@import "black-dashboard/misc";
-@import "black-dashboard/checkboxes-radio";
+@import "black-dashboard/custom/variables";
+@import "black-dashboard/bootstrap/variables";
 
-// components
-@import "black-dashboard/navbar";
-@import "black-dashboard/page-header";
-@import "black-dashboard/dropdown";
-@import "black-dashboard/alerts";
-@import "black-dashboard/images";
-@import "black-dashboard/tables";
-@import "black-dashboard/sidebar-and-main-panel";
-@import "black-dashboard/footers";
-@import "black-dashboard/fixed-plugin";
-@import "black-dashboard/rtl";
+@import "black-dashboard/custom/mixins";
+@import "black-dashboard/bootstrap/mixins";
 
-// cards
-@import "black-dashboard/cards";
-@import "black-dashboard/cards/card-plain";
-@import "black-dashboard/cards/card-chart";
-@import "black-dashboard/cards/card-user";
-@import "black-dashboard/cards/card-map";
-@import "black-dashboard/cards/card-task";
+ // Bootstrap components
 
-@import "black-dashboard/responsive";
+@import "black-dashboard/bootstrap/root";
+@import "black-dashboard/bootstrap/reboot";
+@import "black-dashboard/bootstrap/type";
+@import "black-dashboard/bootstrap/images";
+@import "black-dashboard/bootstrap/code";
+@import "black-dashboard/bootstrap/grid";
+@import "black-dashboard/bootstrap/tables";
+@import "black-dashboard/bootstrap/forms";
+@import "black-dashboard/bootstrap/buttons";
+@import "black-dashboard/bootstrap/transitions";
+@import "black-dashboard/bootstrap/dropdown";
+@import "black-dashboard/bootstrap/button-group";
+@import "black-dashboard/bootstrap/input-group";
+@import "black-dashboard/bootstrap/custom-forms";
+@import "black-dashboard/bootstrap/nav";
+@import "black-dashboard/bootstrap/navbar";
+@import "black-dashboard/bootstrap/card";
+@import "black-dashboard/bootstrap/breadcrumb";
+@import "black-dashboard/bootstrap/pagination";
+@import "black-dashboard/bootstrap/badge";
+@import "black-dashboard/bootstrap/jumbotron";
+@import "black-dashboard/bootstrap/alert";
+@import "black-dashboard/bootstrap/progress";
+@import "black-dashboard/bootstrap/media";
+@import "black-dashboard/bootstrap/list-group";
+@import "black-dashboard/bootstrap/close";
+@import "black-dashboard/bootstrap/modal";
+@import "black-dashboard/bootstrap/tooltip";
+@import "black-dashboard/bootstrap/popover";
+@import "black-dashboard/bootstrap/carousel";
+@import "black-dashboard/bootstrap/utilities";
+@import "black-dashboard/bootstrap/print";
 
-// Dashboard white class
+ // Custom components
 
-@import 'black-dashboard/white-content';
+ @import "black-dashboard/custom/alerts.scss";
+ @import "black-dashboard/custom/buttons.scss";
+ @import "black-dashboard/custom/dropdown.scss";
+ @import "black-dashboard/custom/footer.scss";
+ @import "black-dashboard/custom/forms.scss";
+ @import "black-dashboard/custom/images.scss";
+ @import "black-dashboard/custom/modal.scss";
+ @import "black-dashboard/custom/navbar.scss";
+ @import "black-dashboard/custom/type.scss";
+ @import "black-dashboard/custom/tables";
+ @import "black-dashboard/custom/checkboxes-radio";
+ @import "black-dashboard/custom/fixed-plugin";
+ @import "black-dashboard/custom/sidebar-and-main-panel.scss";
+ @import "black-dashboard/custom/misc.scss";
+ @import "black-dashboard/custom/rtl.scss";
+ @import "black-dashboard/custom/input-group.scss";
+
+
+ // Vendor / Plugins
+
+@import "black-dashboard/custom/vendor/plugin-perfect-scrollbar.scss";
+@import "black-dashboard/custom/vendor/plugin-animate-bootstrap-notify.scss";
+
+// light mode
+
+@import "black-dashboard/custom/white-content.scss";
+
+// Cards
+
+@import 'black-dashboard/custom/card';
+@import "black-dashboard/custom/cards/card-chart";
+@import "black-dashboard/custom/cards/card-map";
+@import "black-dashboard/custom/cards/card-user";
+@import "black-dashboard/custom/cards/card-task";
+@import "black-dashboard/custom/cards/card-plain";

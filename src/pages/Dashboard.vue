@@ -98,7 +98,11 @@
             <h6 class="title d-inline">{{$t('dashboard.tasks', {count: 5})}}</h6>
             <p class="card-category d-inline">{{$t('dashboard.today')}}</p>
             <base-dropdown menu-on-right="" tag="div" :class="{'float-left': isRTL}">
-              <base-button slot="title" type="link" icon class="dropdown-toggle">
+              <base-button slot="title"
+                           type="link"
+                           data-toggle="dropdown"
+                           icon
+                           class="dropdown-toggle">
                 <i class="tim-icons icon-settings-gear-63"></i>
               </base-button>
               <a class="dropdown-item" href="#pablo">{{$t('dashboard.dropdown.action')}}</a>

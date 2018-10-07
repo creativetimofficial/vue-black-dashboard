@@ -6,7 +6,6 @@ import RTLPlugin from "./RTLPlugin";
 import "es6-promise/auto";
 
 //css assets
-import "bootstrap/dist/css/bootstrap.css";
 import "@/assets/sass/black-dashboard.scss";
 import "@/assets/css/nucleo-icons.css";
 import "@/assets/demo/demo.css";

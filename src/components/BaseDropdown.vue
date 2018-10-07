@@ -6,6 +6,7 @@
              v-click-outside="closeDropDown">
     <a class="dropdown-toggle btn-rotate"
        :class="titleClasses"
+       :aria-expanded="isOpen"
        data-toggle="dropdown">
       <slot name="title">
         <i :class="icon"></i>
