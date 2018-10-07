@@ -1,4 +1,7 @@
-
+@import "../bootstrap/mixins";
+@import "../bootstrap/functions";
+@import "functions";
+@import "mixins";
 // Global settings
 
 $enable-caret:              true !default;
@@ -104,7 +107,7 @@ $info:          #1d8cf8 !default;
 $warning:       #ff8d72 !default;
 $danger:        #fd5d93 !default;
 $black:         #222a42 !default;
-
+$vue:           #42b883 !default;
 
 // gradient
 $default-states:       #263148 !default;
@@ -114,6 +117,7 @@ $info-states:          #3358f4 !default;
 $warning-states:       #ff6491 !default;
 $danger-states:        #ec250d !default;
 $black-states:         #1d253b !default;
+$vue-states:           #38ef7d !default;
 
 $background-black:           #1e1e2f !default;
 $background-states-black:    #1e1e24 !default;

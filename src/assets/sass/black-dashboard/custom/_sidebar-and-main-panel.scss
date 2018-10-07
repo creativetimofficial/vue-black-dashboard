@@ -279,8 +279,22 @@
             float: left;
             width: 34px;
             text-align: center;
-            margin-left: 10px;
-            margin-right: 12px;
+            margin-left: 12px;
+            margin-right: 10px;
+        }
+
+        a.logo-mini .logo-img {
+          width: 32px;
+          display: inline-block;
+          height: 32px;
+          margin-left: 0;
+          margin-right: 15px;
+          background: #fff;
+          border-radius: 32px;
+          text-align: center;
+          img {
+            max-width: 21px;
+          }
         }
 
         a.logo-normal{
@@ -343,6 +357,10 @@
     }
     &[data="green"]{
       @include linear-gradient($success-states, $success);
+    }
+
+    &[data="vue"] {
+      @include linear-gradient($vue-states, $vue);
     }
 
     .user{
@@ -448,6 +466,10 @@
 
     &[data="green"]{
       border-top: 2px solid $success;
+    }
+
+    &[data="vue"]{
+      border-top: 2px solid $vue;
     }
 
     &[data="primary"]{
