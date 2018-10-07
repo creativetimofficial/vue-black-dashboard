@@ -12,6 +12,9 @@
     <div class="card-body" v-if="$slots.default">
       <slot></slot>
     </div>
+    <div class="card-image" v-if="$slots['image-bottom']">
+      <slot name="image-bottom"></slot>
+    </div>
     <slot name="raw-content"></slot>
     <div class="card-footer" v-if="$slots.footer">
       <slot name="footer"></slot>
