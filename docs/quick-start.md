@@ -34,7 +34,7 @@ Here's the list of global components:
 - **BaseCheckbox**
 - **BaseDropdown**
 - **Card**
-- **FormGroupInput**
+- **BaseInput**
 
 #### Local components
 

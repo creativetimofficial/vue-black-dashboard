@@ -61,7 +61,7 @@ Once downloaded, unzip the compressed folder and you’ll see something like thi
         |   |   |-- config.js
         |   |   |-- utils.js
         |   |-- Inputs
-        |   |   |-- formGroupInput.vue
+        |   |   |-- BaseInput.vue
         |   |-- NotificationPlugin
         |   |   |-- Notification.vue
         |   |   |-- Notifications.vue

@@ -2,6 +2,9 @@ $box-shadow: 0 10px 20px -8px rgba(0,0,0,.15);
 $border-color: rgba(0,0,0,.05);
 $primary: #e14eca;
 $orange: #fb6340;
+body.bd-docs {
+  background: white;
+}
 .ct-documentation {
   table {
     width: 100%;
@@ -60,10 +63,10 @@ $orange: #fb6340;
 
 }
 
-.white-content div[class*="language-"] .highlight-lines {
+.bd-docs div[class*="language-"] .highlight-lines {
   line-height: 1.6;
 }
-.white-content .sidebar {
+.bd-docs .sidebar {
   background: #f5f6fa;
   box-shadow: none;
 }

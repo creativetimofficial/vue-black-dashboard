@@ -43,7 +43,7 @@ module.exports = {
       collapsable: false,
       children: [
         '/components/alerts',
-        '/components/badges',
+        '/components/breadcrumb',
         '/components/buttons',
         '/components/cards',
         '/components/dropdowns',
