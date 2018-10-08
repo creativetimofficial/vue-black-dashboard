@@ -2,6 +2,7 @@ import DemoBlock from './demo-block/demo-block'
 import * as Components from '@/components/index'
 import LineChart from '@/components/Charts/LineChart'
 import BarChart from '@/components/Charts/BarChart'
+import Notification from '@/components/NotificationPlugin/Notification'
 import Dashboard from '@/plugins/blackDashboard'
 import VueClipboard from 'vue-clipboard2'
 import './docs.css'
@@ -23,7 +24,9 @@ export default ({
   for(let [name, component] of componentEntries) {
     Vue.component(component.name || name, component)
   }
-  Vue.prototype.$docs = Object.values(Components);
+  let allComponents = Object.values(Components);
+  allComponents = allComponents.concat([LineChart, BarChart, Notification]);
+  Vue.prototype.$docs = allComponents;
   let docComponents = getElements(componentEntries);
   siteData.themeConfig.sidebar = siteData.themeConfig.sidebar.concat(docComponents);
 }

@@ -51,6 +51,8 @@ Black Dashboard has changed the predefined button styles from Bootstrap, each se
   </base-button>
   <base-button simple type="primary">Simple</base-button>
   <base-button link type="primary">Link</base-button>
+  <base-button loading type="primary">Loading</base-button>
+  <base-button block type="primary">Block</base-button>
 </div>
 ```
 :::
