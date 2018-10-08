@@ -31,11 +31,13 @@
       },
       dismissible: {
         type: Boolean,
-        default: false
+        default: false,
+        description: 'Whether alert is dismissible (closeable)'
       },
       withIcon: {
         type: Boolean,
-        default: false
+        default: false,
+        description: 'Whether alert contains icon'
       }
     },
     data() {

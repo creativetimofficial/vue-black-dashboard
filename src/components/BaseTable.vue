@@ -24,27 +24,30 @@
   export default {
     name: 'base-table',
     props: {
-      columns: Array,
-      data: Array,
+      columns: {
+        type: Array,
+        default: () => [],
+        description: "Table columns"
+      },
+      data: {
+        type: Array,
+        default: () => [],
+        description: "Table data"
+      },
       type: {
         type: String, // striped | hover
-        default: ""
-      },
-      title: {
-        type: String,
-        default: ""
+        default: "",
+        description: "Whether table is striped or hover type"
       },
       theadClasses: {
         type: String,
-        default: ''
+        default: '',
+        description: "<thead> css classes"
       },
       tbodyClasses: {
         type: String,
-        default: ''
-      },
-      subTitle: {
-        type: String,
-        default: ""
+        default: '',
+        description: "<tbody> css classes"
       }
     },
     computed: {

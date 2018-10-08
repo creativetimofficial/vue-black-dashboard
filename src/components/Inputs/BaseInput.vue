@@ -39,10 +39,22 @@
     inheritAttrs: false,
     name: "base-input",
     props: {
-      label: String,
-      value: [String, Number],
-      addonRightIcon: String,
-      addonLeftIcon: String
+      label: {
+        type: String,
+        description: "Input label"
+      },
+      value: {
+        type: [String, Number],
+        description: "Input value"
+      },
+      addonRightIcon: {
+        type: String,
+        description: "Input icon on the right"
+      },
+      addonLeftIcon: {
+        type: String,
+        description: "Input icon on the left"
+      },
     },
     model: {
       prop: 'value',

@@ -21,10 +21,18 @@
       prop: "checked"
     },
     props: {
-      checked: [Array, Boolean],
-      disabled: Boolean,
-      inline: Boolean,
-      hasError: Boolean
+      checked: {
+        type: [Array, Boolean],
+        description: "Whether checkbox is checked"
+      },
+      disabled: {
+        type: Boolean,
+        description: "Whether checkbox is disabled"
+      },
+      inline: {
+        type: Boolean,
+        description: "Whether checkbox should be inline with other checkboxes"
+      }
     },
     data() {
       return {
