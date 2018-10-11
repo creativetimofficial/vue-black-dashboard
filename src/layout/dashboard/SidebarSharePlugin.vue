@@ -67,7 +67,7 @@
     },
     data() {
       return {
-        isOpen: true,
+        isOpen: false,
         sidebarColors: [
           { color: 'primary', active: true, value: 'primary' },
           { color: 'vue', active: false, value: 'vue' },
