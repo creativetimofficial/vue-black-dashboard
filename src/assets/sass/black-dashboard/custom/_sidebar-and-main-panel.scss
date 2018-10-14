@@ -362,8 +362,8 @@
       @include linear-gradient($success-states, $success);
     }
 
-    &[data="purple"] {
-      @include linear-gradient($purple-states, $purple);
+    &[data="vue"] {
+      @include linear-gradient($vue-states, $vue);
     }
 
     .user{

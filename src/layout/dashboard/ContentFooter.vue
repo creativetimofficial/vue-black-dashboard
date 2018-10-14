@@ -22,7 +22,7 @@
       </nav>
       <div class="copyright float-right">
         © {{year}} made with <i class="tim-icons icon-heart-2"></i> by
-        <a href="https://github.com/cristijora" target="_blank"> Cristi Jora</a>&nbsp;&
+        <a href="https://www.binarcode.com" target="_blank">Binar Code</a>&nbsp;&
         <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
       </div>
     </div>

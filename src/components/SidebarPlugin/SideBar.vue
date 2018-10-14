@@ -48,11 +48,7 @@
       },
       backgroundColor: {
         type: String,
-        default: "black",
-        validator: value => {
-          let acceptedValues = ["white", "black", "darkblue"];
-          return acceptedValues.indexOf(value) !== -1;
-        }
+        default: "vue"
       },
       activeColor: {
         type: String,
