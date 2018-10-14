@@ -69,9 +69,6 @@
   export default {
     components: {
       SearchBox
-    },
-    mounted() {
-      document.body.classList.add('bd-docs');
     }
   }
 </script>
@@ -79,7 +76,7 @@
     nav.main-nav {
       z-index: 50;
         &.navbar {
-            background-color: #e14eca;
+            background-color: #42b883;
             box-shadow: rgba(116, 129, 141, .1) 0 1px 1px 0;
             position: fixed;
             .container {

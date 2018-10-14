@@ -1,5 +1,5 @@
 <template>
-    <div class="theme-container ct-documentation">
+    <div class="theme-container ct-documentation bd-docs">
         <Navbar></Navbar>
         <notifications></notifications>
         <div
