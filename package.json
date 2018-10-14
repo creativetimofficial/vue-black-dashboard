@@ -9,7 +9,7 @@
     "lint-fix": "vue-cli-service lint --fix",
     "build:docs": "cd docs && npm run build:docs && cd ..",
     "build:all": "npm run build && npm run build:docs",
-    "deploy": "npm run build:all && sudo gh-pages -d dist"
+    "deploy": "npm run build:all && sudo gh-pages -d dist",
     "dev": "vue-cli-service serve --open",
     "serve": "vue-cli-service serve --open"
   },
