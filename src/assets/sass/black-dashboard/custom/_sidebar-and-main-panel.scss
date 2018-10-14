@@ -295,6 +295,9 @@
           img {
             max-width: 21px;
           }
+          &.logo-img-rtl {
+            margin-right: 0;
+          }
         }
 
         a.logo-normal{
@@ -359,8 +362,8 @@
       @include linear-gradient($success-states, $success);
     }
 
-    &[data="vue"] {
-      @include linear-gradient($vue-states, $vue);
+    &[data="purple"] {
+      @include linear-gradient($purple-states, $purple);
     }
 
     .user{
@@ -468,8 +471,8 @@
       border-top: 2px solid $success;
     }
 
-    &[data="vue"]{
-      border-top: 2px solid $vue;
+    &[data="purple"]{
+      border-top: 2px solid $purple;
     }
 
     &[data="primary"]{

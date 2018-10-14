@@ -7,10 +7,11 @@
     "e2e": "node test/e2e/runner.js",
     "lint": "vue-cli-service lint",
     "lint-fix": "vue-cli-service lint --fix",
-    "dev": "vue-cli-service serve --open",
     "build:docs": "cd docs && npm run build:docs && cd ..",
     "build:all": "npm run build && npm run build:docs",
     "deploy": "npm run build:all && sudo gh-pages -d dist"
+    "dev": "vue-cli-service serve --open",
+    "serve": "vue-cli-service serve --open"
   },
   "dependencies": {
     "chart.js": "^2.7.2",
