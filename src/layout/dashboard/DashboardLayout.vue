@@ -43,7 +43,7 @@ export default {
   },
   data() {
     return {
-      backgroundColor: "black"
+      backgroundColor: "vue"
     };
   },
   methods: {

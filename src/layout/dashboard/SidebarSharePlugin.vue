@@ -69,8 +69,8 @@
       return {
         isOpen: false,
         sidebarColors: [
-          { color: 'primary', active: true, value: 'primary' },
-          { color: 'purple', active: false, value: 'purple' },
+          { color: 'primary', active: false, value: 'primary' },
+          { color: 'vue', active: true, value: 'vue' },
           { color: 'info', active: false, value: 'blue' },
           { color: 'success', active: false, value: 'green' }
         ]
@@ -109,7 +109,7 @@
   .settings-icon {
     cursor: pointer;
   }
-  .badge-purple {
-    background-color: $purple;
+  .badge-vue {
+    background-color: $vue;
   }
 </style>
