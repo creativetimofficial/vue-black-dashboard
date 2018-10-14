@@ -33,7 +33,7 @@
             <line-chart style="height: 100%"
                         ref="bigChart"
                         :chart-data="bigLineChart.chartData"
-                        :gradient-color="bigLineChart.gradientColors"
+                        :gradient-colors="bigLineChart.gradientColors"
                         :gradient-stops="bigLineChart.gradientStops"
                         :extra-options="bigLineChart.extraOptions">
             </line-chart>
@@ -51,7 +51,7 @@
           <div class="chart-area">
             <line-chart style="height: 100%"
                         :chart-data="purpleLineChart.chartData"
-                        :gradient-color="purpleLineChart.gradientColors"
+                        :gradient-colors="purpleLineChart.gradientColors"
                         :gradient-stops="purpleLineChart.gradientStops"
                         :extra-options="purpleLineChart.extraOptions">
             </line-chart>
@@ -67,7 +67,6 @@
           <div class="chart-area">
             <bar-chart style="height: 100%"
                        :chart-data="blueBarChart.chartData"
-                       :gradient-color="blueBarChart.gradientColors"
                        :gradient-stops="blueBarChart.gradientStops"
                        :extra-options="blueBarChart.extraOptions">
             </bar-chart>
@@ -83,7 +82,6 @@
           <div class="chart-area">
             <line-chart style="height: 100%"
                         :chart-data="greenLineChart.chartData"
-                        :gradient-color="greenLineChart.gradientColors"
                         :gradient-stops="greenLineChart.gradientStops"
                         :extra-options="greenLineChart.extraOptions">
             </line-chart>
@@ -129,6 +127,7 @@
   import * as chartConfigs from '@/components/Charts/config';
   import TaskList from './Dashboard/TaskList';
   import UserTable from './Dashboard/UserTable';
+  import config from '@/config';
 
   export default {
     components: {
@@ -148,7 +147,7 @@
           activeIndex: 0,
           chartData: null,
           extraOptions: chartConfigs.purpleChartOptions,
-          gradientColors: ['rgba(72,72,176,0.1)', 'rgba(72,72,176,0.0)', 'rgba(119,52,169,0)'],
+          gradientColors: config.colors.primaryGradient,
           gradientStops: [1, 0.4, 0],
           categories: []
         },
@@ -159,13 +158,13 @@
             datasets: [{
               label: "Data",
               fill: true,
-              borderColor: '#d048b6',
+              borderColor: config.colors.primary,
               borderWidth: 2,
               borderDash: [],
               borderDashOffset: 0.0,
-              pointBackgroundColor: '#d048b6',
+              pointBackgroundColor: config.colors.primary,
               pointBorderColor: 'rgba(255,255,255,0)',
-              pointHoverBackgroundColor: '#d048b6',
+              pointHoverBackgroundColor: config.colors.primary,
               pointBorderWidth: 20,
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
@@ -173,7 +172,7 @@
               data: [80, 100, 70, 80, 120, 80],
             }]
           },
-          gradientColors: ['rgba(72,72,176,0.2)', 'rgba(72,72,176,0.0)', 'rgba(119,52,169,0)'],
+          gradientColors: config.colors.primaryGradient,
           gradientStops: [1, 0.2, 0],
         },
         greenLineChart: {
@@ -183,13 +182,13 @@
             datasets: [{
               label: "My First dataset",
               fill: true,
-              borderColor: '#00d6b4',
+              borderColor: config.colors.danger,
               borderWidth: 2,
               borderDash: [],
               borderDashOffset: 0.0,
-              pointBackgroundColor: '#00d6b4',
+              pointBackgroundColor: config.colors.danger,
               pointBorderColor: 'rgba(255,255,255,0)',
-              pointHoverBackgroundColor: '#00d6b4',
+              pointHoverBackgroundColor: config.colors.danger,
               pointBorderWidth: 20,
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
@@ -207,14 +206,14 @@
             datasets: [{
               label: "Countries",
               fill: true,
-              borderColor: '#1f8ef1',
+              borderColor: config.colors.info,
               borderWidth: 2,
               borderDash: [],
               borderDashOffset: 0.0,
               data: [53, 20, 10, 80, 100, 45],
             }]
           },
-          gradientColors: ['rgba(29,140,248,0.2)', 'rgba(29,140,248,0.0)', 'rgba(29,140,248,0)'],
+          gradientColors: config.colors.primaryGradient,
           gradientStops: [1, 0.4, 0],
         }
       }
@@ -235,13 +234,13 @@
         let chartData = {
           datasets: [{
             fill: true,
-            borderColor: '#d346b1',
+            borderColor: config.colors.primary,
             borderWidth: 2,
             borderDash: [],
             borderDashOffset: 0.0,
-            pointBackgroundColor: '#d346b1',
+            pointBackgroundColor: config.colors.primary,
             pointBorderColor: 'rgba(255,255,255,0)',
-            pointHoverBackgroundColor: '#d346b1',
+            pointHoverBackgroundColor: config.colors.primary,
             pointBorderWidth: 20,
             pointHoverRadius: 4,
             pointHoverBorderWidth: 15,

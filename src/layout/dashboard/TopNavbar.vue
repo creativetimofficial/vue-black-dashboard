@@ -39,7 +39,7 @@
                    id="searchModal"
                    :centered="false"
                    :show-close="true">
-              <input slot="header" type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
+              <base-input slot="header" v-model="searchQuery" type="text" id="inlineFormInputGroup" placeholder="SEARCH"/>
             </modal>
             <base-dropdown tag="li" title-tag="a" class="nav-item" menu-on-right>
               <a slot="title" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="true">
@@ -114,7 +114,8 @@
       return {
         activeNotifications: false,
         showMenu: false,
-        searchModalVisible: false
+        searchModalVisible: false,
+        searchQuery: ''
       };
     },
     methods: {
