@@ -120,28 +120,28 @@ Here is the list of Bootstrap 4 components that were restyled in Argon:
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Alerts</h6>
+        <h6 class="mb-0 text-white">Alerts</h6>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Badge</h6>
+        <h6 class="mb-0 text-white">Badge</h6>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Buttons</h6>
+        <h6 class="mb-0 text-white">Buttons</h6>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Carousel</h6>
+        <h6 class="mb-0 text-white">Carousel</h6>
       </div>
     </div>
   </div>
@@ -151,28 +151,28 @@ Here is the list of Bootstrap 4 components that were restyled in Argon:
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Dropdowns</h6>
+        <h6 class="mb-0 text-white">Dropdowns</h6>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Forms</h6>
+        <h6 class="mb-0 text-white">Forms</h6>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Modal</h6>
+        <h6 class="mb-0 text-white">Modal</h6>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Navs</h6>
+        <h6 class="mb-0 text-white">Navs</h6>
       </div>
     </div>
   </div>
@@ -186,28 +186,28 @@ Besides giving the existing Bootstrap elements a new look, we added new ones, so
     <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Sidebar</h6>
+        <h6 class="mb-0 text-white">Sidebar</h6>
       </div>
     </div>
     </div>
     <div class="col-md-3">
         <div class="card shadow-sm">
           <div class="p-4 text-center">
-            <h6 class="mb-0">Custom Inputs</h6>
+            <h6 class="mb-0 text-white">Custom Inputs</h6>
           </div>
         </div>
       </div>
     <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Checkboxes</h6>
+        <h6 class="mb-0 text-white">Checkboxes</h6>
       </div>
     </div>
     </div>
     <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Notifications</h6>
+        <h6 class="mb-0 text-white">Notifications</h6>
       </div>
     </div>
     </div>
@@ -217,28 +217,28 @@ Besides giving the existing Bootstrap elements a new look, we added new ones, so
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Charts</h6>
+        <h6 class="mb-0 text-white">Charts</h6>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Font Awesome</h6>
+        <h6 class="mb-0 text-white">Font Awesome</h6>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Nucleo icons</h6>
+        <h6 class="mb-0 text-white">Nucleo icons</h6>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0">Cards</h6>
+        <h6 class="mb-0 text-white">Cards</h6>
       </div>
     </div>
   </div>
