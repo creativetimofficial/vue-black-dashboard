@@ -26,7 +26,7 @@
             </slot>
           </div>
 
-          <div class="modal-body" :class="bodyClasses">
+          <div v-if="$slots.default" class="modal-body" :class="bodyClasses">
             <slot></slot>
           </div>
 
