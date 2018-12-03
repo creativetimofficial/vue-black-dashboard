@@ -9,5 +9,9 @@ module.exports = {
       localeDir: 'locales',
       enableInSFC: false
     }
+  },
+  css: {
+    // Enable CSS source maps.
+    sourceMap: true
   }
 };
