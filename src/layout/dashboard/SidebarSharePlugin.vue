@@ -32,6 +32,12 @@
             Documentation
           </a>
         </li>
+        <li class="header-title">Want more components?</li>
+        <li class="button-container">
+          <a href="https://www.creative-tim.com/product/vue-black-dashboard-pro" class="btn-round btn btn-danger btn-block">
+            Get pro version
+          </a>
+        </li>
 
 
         <li class="header-title">Thank you for sharing!</li>
