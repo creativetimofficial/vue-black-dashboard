@@ -1,5 +1,6 @@
 import Vue from "vue";
 import App from "./App";
+// TIP: change to import router from "./router/starterRouter"; to start with a clean layout
 import router from "./router/index";
 
 import BlackDashboard from "./plugins/blackDashboard";
