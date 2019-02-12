@@ -244,7 +244,8 @@
 
         p{
             margin: 0;
-            font-weight: $font-weight-normal;
+            font-weight: $font-weight-bold;
+            color: rgba($white,0.8);
             line-height: 30px;
             position: relative;
             display: block;
