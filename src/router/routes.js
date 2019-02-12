@@ -3,13 +3,13 @@ import DashboardLayout from "@/layout/dashboard/DashboardLayout.vue";
 import NotFound from "@/pages/NotFoundPage.vue";
 
 // Admin pages
-import Dashboard from "@/pages/Dashboard.vue";
-import Profile from "@/pages/Profile.vue";
-import Notifications from "@/pages/Notifications.vue";
-import Icons from "@/pages/Icons.vue";
-import Maps from "@/pages/Maps.vue";
-import Typography from "@/pages/Typography.vue";
-import TableList from "@/pages/TableList.vue";
+const Dashboard = () => import(/* webpackChunkName: "dashboard" */"@/pages/Dashboard.vue");
+const Profile = () => import(/* webpackChunkName: "common" */ "@/pages/Profile.vue");
+const Notifications = () => import(/* webpackChunkName: "common" */"@/pages/Notifications.vue");
+const Icons = () => import(/* webpackChunkName: "common" */ "@/pages/Icons.vue");
+const Maps = () => import(/* webpackChunkName: "common" */ "@/pages/Maps.vue");
+const Typography = () => import(/* webpackChunkName: "common" */ "@/pages/Typography.vue");
+const TableList = () => import(/* webpackChunkName: "common" */ "@/pages/TableList.vue");
 
 const routes = [
   {
