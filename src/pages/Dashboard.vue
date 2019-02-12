@@ -32,6 +32,7 @@
           <div class="chart-area">
             <line-chart style="height: 100%"
                         ref="bigChart"
+                        chart-id="big-line-chart"
                         :chart-data="bigLineChart.chartData"
                         :gradient-colors="bigLineChart.gradientColors"
                         :gradient-stops="bigLineChart.gradientStops"
@@ -50,6 +51,7 @@
           </template>
           <div class="chart-area">
             <line-chart style="height: 100%"
+                        chart-id="purple-line-chart"
                         :chart-data="purpleLineChart.chartData"
                         :gradient-colors="purpleLineChart.gradientColors"
                         :gradient-stops="purpleLineChart.gradientStops"
@@ -66,6 +68,7 @@
           </template>
           <div class="chart-area">
             <bar-chart style="height: 100%"
+                       chart-id="blue-bar-chart"
                        :chart-data="blueBarChart.chartData"
                        :gradient-stops="blueBarChart.gradientStops"
                        :extra-options="blueBarChart.extraOptions">
@@ -81,6 +84,7 @@
           </template>
           <div class="chart-area">
             <line-chart style="height: 100%"
+                        chart-id="green-line-chart"
                         :chart-data="greenLineChart.chartData"
                         :gradient-stops="greenLineChart.gradientStops"
                         :extra-options="greenLineChart.extraOptions">
@@ -97,6 +101,7 @@
             <p class="card-category d-inline">{{$t('dashboard.today')}}</p>
             <base-dropdown menu-on-right=""
                            tag="div"
+                           aria-label="Settings menu"
                            title-classes="btn btn-link btn-icon"
                            :class="{'float-left': isRTL}">
               <i slot="title" class="tim-icons icon-settings-gear-63"></i>

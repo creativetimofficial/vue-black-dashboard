@@ -10,6 +10,7 @@
         class="dropdown-toggle btn-rotate"
         :class="titleClasses"
         :aria-expanded="isOpen"
+        :aria-label="title"
         data-toggle="dropdown">
         <slot name="title" :is-open="isOpen">
           <i :class="icon"></i>

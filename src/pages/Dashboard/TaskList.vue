@@ -11,7 +11,7 @@
           <p class="text-muted">{{row.description}}</p>
         </td>
         <td class="td-actions text-right">
-          <base-button type="link">
+          <base-button type="link" aria-label="edit button">
             <i class="tim-icons icon-pencil"></i>
           </base-button>
         </td>
