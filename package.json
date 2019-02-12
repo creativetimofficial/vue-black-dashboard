@@ -11,33 +11,27 @@
     "serve": "vue-cli-service serve --open"
   },
   "dependencies": {
-    "chart.js": "^2.7.2",
-    "es6-promise": "^4.2.4",
-    "vue": "^2.5.17",
+    "chart.js": "^2.7.3",
+    "vue": "^2.6.6",
     "vue-chartjs": "^3.4.0",
-    "vue-i18n": "^8.0.0",
-    "vue-router": "^3.0.1",
+    "vue-i18n": "^8.8.1",
+    "vue-router": "^3.0.2",
     "vue2-transitions": "^0.2.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.2.0",
-    "@vue/cli-plugin-eslint": "^3.2.1",
-    "@vue/cli-service": "^3.2.0",
-    "@vue/eslint-config-prettier": "^4.0.1",
-    "node-sass": "^4.10.0",
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
-    "vue-cli-plugin-i18n": "^0.5.0",
-    "vue-template-compiler": "^2.5.17"
+    "vue-cli-plugin-i18n": "^0.5.1",
+    "vue-template-compiler": "^2.6.6"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not ie <= 8"
+    "not ie <= 11"
   ],
-  "description": "A sample admin dashboard based on paper dashboard UI template",
-  "author": "cristian.jora <joracristi@gmail.com>",
-  "engines": {
-    "node": ">= 8.1.4",
-    "npm": ">= 5.0.0"
-  }
+  "description": "A sample admin dashboard based on black dashboard UI template",
+  "author": "cristian.jora <joracristi@gmail.com>"
 }
