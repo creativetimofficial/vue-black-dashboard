@@ -43,8 +43,8 @@
         <li class="header-title">Thank you for sharing!</li>
 
         <li class="button-container text-center">
-          <social-sharing url="https://cristijora.github.io/vue-paper-dashboard/" inline-template
-                          title="Vue Paper Dashboard - Free Bootstrap Admin Template for Vue.js"
+          <social-sharing url="https://www.creative-tim.com/product/vue-black-dashboard" inline-template
+                          title="Vue Black Dashboard - Free Bootstrap Admin Template for Vue.js"
                           hashtags="vuejs, dashboard, bootstrap" twitter-user="creativetim">
             <div>
               <network network="twitter" class="btn btn-round btn-info sharrre">

@@ -3,7 +3,6 @@ import Notify from "@/components/NotificationPlugin";
 import GlobalComponents from "./globalComponents";
 import GlobalDirectives from "./globalDirectives";
 import RTLPlugin from "./RTLPlugin";
-import "es6-promise/auto";
 
 //css assets
 import "@/assets/sass/black-dashboard.scss";
