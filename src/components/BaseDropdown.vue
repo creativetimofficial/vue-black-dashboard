@@ -10,7 +10,7 @@
         class="dropdown-toggle btn-rotate"
         :class="titleClasses"
         :aria-expanded="isOpen"
-        :aria-label="title"
+        :aria-label="title || ariaLabel"
         data-toggle="dropdown">
         <slot name="title" :is-open="isOpen">
           <i :class="icon"></i>
@@ -58,6 +58,7 @@
         type: Boolean,
         description: "Whether menu should appear on the right"
       },
+      ariaLabel: String
     },
     data() {
       return {

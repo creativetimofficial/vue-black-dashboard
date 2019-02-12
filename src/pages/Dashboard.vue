@@ -101,8 +101,8 @@
             <p class="card-category d-inline">{{$t('dashboard.today')}}</p>
             <base-dropdown menu-on-right=""
                            tag="div"
-                           aria-label="Settings menu"
                            title-classes="btn btn-link btn-icon"
+                           aria-label="Settings menu"
                            :class="{'float-left': isRTL}">
               <i slot="title" class="tim-icons icon-settings-gear-63"></i>
               <a class="dropdown-item" href="#pablo">{{$t('dashboard.dropdown.action')}}</a>
