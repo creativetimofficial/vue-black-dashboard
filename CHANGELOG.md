@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.1.0] 2019-02-12
+- Package updates
+- Add pwa support
+- Improve accessibility
+- Cleanups & other minor UI improvements
+- Improve bundle size
+
 ## [1.0.1] 2018-12-03
 ### Minor updates
 - Upgrade packages
