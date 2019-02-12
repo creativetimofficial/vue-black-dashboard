@@ -5,6 +5,8 @@
 - Upgrade packages
 - Change sidebar gradient colors (more pleasant)
 - Make links "bolder" in the sidebar so they are more readable
+- Improve bundle size, add vue-router prefetch
+- Add pwa support
 
 
 ## [1.0.0] 2018-10-14
