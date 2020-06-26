@@ -37,7 +37,9 @@
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",
     "vue-cli-plugin-i18n": "^1.0.1",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "gulp": "4.0.2",
+    "gulp-append-prepend": "1.0.8"
   },
   "browserslist": [
     "> 1%",
