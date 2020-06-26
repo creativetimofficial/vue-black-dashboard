@@ -1,5 +1,8 @@
 # Change Log
 
+## [1.1.1] 2020-06-26
+- Package updates
+
 ## [1.1.0] 2019-02-12
 - Package updates
 - Add pwa support
