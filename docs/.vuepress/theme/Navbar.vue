@@ -64,7 +64,7 @@
     </base-nav>
 </template>
 <script>
-  import SearchBox from '../../node_modules/vuepress/lib/default-theme/SearchBox.vue';
+  import SearchBox from '@SearchBox'
 
   export default {
     components: {
@@ -79,6 +79,7 @@
             background-color: #42b883;
             box-shadow: rgba(116, 129, 141, .1) 0 1px 1px 0;
             position: fixed;
+            top: 0;
             .container {
                 max-width: 100%;
                 width: 100%;

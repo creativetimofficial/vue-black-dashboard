@@ -6,9 +6,12 @@ module.exports = {
   markdown: {
     config: markdownParser
   },
+  extendMarkdown: markdownParser,
   configureWebpack: (config, isServer) => {
     config.resolve.alias['@'] = path.resolve(__dirname, '../../src')
+    config.resolve.alias['src'] = path.resolve(__dirname, '../../src')
     config.resolve.alias['assets'] = path.resolve(__dirname, '../../src/assets')
+    config.resolve.alias['@theme'] = path.resolve(__dirname, '../node_modules/@vuepress/theme-default')
   },
   chainWebpack: config => {
     config.module
@@ -23,6 +26,11 @@ module.exports = {
   head: [
     ['link', { rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" }],
     ['link', { rel: 'stylesheet', href: "https://use.fontawesome.com/releases/v5.0.6/css/all.css" }],
+  ],
+  plugins: [
+    ['@vuepress/search', {
+      searchMaxSuggestions: 10
+    }]
   ],
   themeConfig: {
     sidebarDepth: 1,

@@ -10,6 +10,7 @@
     "build:docs": "vuepress build && npm run copy:docs"
   },
   "devDependencies": {
+    "@vuepress/plugin-search": "^1.0.0-alpha.0",
     "cheerio": "^1.0.0-rc.2",
     "gh-pages": "^1.1.0",
     "markdown-it-container": "^2.0.0",
@@ -18,13 +19,17 @@
     "rgb-hex": "^2.1.0",
     "sass-vars-to-js-loader": "^2.0.2",
     "vue-docgen-api": "^2.3.11",
-    "vuepress": "^0.13.0"
+    "vuepress": "^1.0.0-alpha.37",
+    "sass-loader": "^8.0.2"
   },
   "author": "tagup@tagup.io",
   "description": "Tagup component docs",
   "dependencies": {
+    "chart.js": "^2.9.3",
     "element-ui": "^2.4.0",
     "nprogress": "^0.2.0",
-    "vue-clipboard2": "^0.2.1"
+    "vue-clipboard2": "^0.2.1",
+    "vue2-transitions": "^0.3.0",
+    "vue-chartjs": "^3.5.0"
   }
 }

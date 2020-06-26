@@ -48,12 +48,12 @@
 </template>
 <script>
   import Navbar from './Navbar';
-  import Sidebar from '../../node_modules/vuepress/lib/default-theme/Sidebar';
-  import Home from '../../node_modules/vuepress/lib/default-theme/Home';
-  import Page from '../../node_modules/vuepress/lib/default-theme/Page';
-  import {resolveSidebarItems} from '../../node_modules/vuepress/lib/default-theme/util';
+  import Sidebar from '../../node_modules/@vuepress/theme-default/components/Sidebar';
+  import Home from '../../node_modules/@vuepress/theme-default/components/Home';
+  import Page from '../../node_modules/@vuepress/theme-default/components/Page';
+  import {resolveSidebarItems} from '../../node_modules/@vuepress/theme-default/util/index';
   import 'prismjs/themes/prism-tomorrow.css';
-  import '../../node_modules/vuepress/lib/default-theme/styles/theme.styl';
+  import './styles/theme.styl';
 
   export default {
     components: {
@@ -85,11 +85,12 @@
   }
 </script>
 <style>
-    .theme-content {
+
+    .theme-default-content {
         margin-top: 100px;
     }
-    .page.custom-page .content{
-        margin: 60px 20px 20px;
+    .page.custom-page .theme-default-content{
+        margin: 100px 20px 20px;
         max-width: 100%;
     }
 </style>
