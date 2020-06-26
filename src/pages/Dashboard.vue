@@ -150,7 +150,10 @@
             [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130]
           ],
           activeIndex: 0,
-          chartData: null,
+          chartData: {
+            datasets: [{ }],
+            labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+          },
           extraOptions: chartConfigs.purpleChartOptions,
           gradientColors: config.colors.primaryGradient,
           gradientStops: [1, 0.4, 0],
