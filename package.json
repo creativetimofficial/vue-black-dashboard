@@ -13,7 +13,7 @@
     "lint-fix": "vue-cli-service lint --fix"
   },
   "dependencies": {
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-chartjs": "^3.5.0",
