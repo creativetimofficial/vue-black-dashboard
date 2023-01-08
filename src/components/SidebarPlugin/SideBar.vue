@@ -18,9 +18,9 @@
               alt="">
           </div>
         </a>
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+        <label class="simple-text logo-normal" style ="text-transform: none;"> 
           {{title}}
-        </a>
+        </label>
       </div>
       <slot>
 
@@ -46,7 +46,7 @@
     props: {
       title: {
         type: String,
-        default: "Creative Tim"
+        default: "KaDB"
       },
       backgroundColor: {
         type: String,

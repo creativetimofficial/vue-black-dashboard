@@ -1,6 +1,14 @@
 {
   "root": true,
   "extends": [
-    "plugin:vue/essential"
-  ]
+    "plugin:vue/essential",
+    "eslint:recommended"
+  ],
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "parser": "@babel/eslint-parser"
+  },
+  "rules": {"vue/multi-word-component-names": "off"}
 }
