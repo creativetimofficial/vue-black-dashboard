@@ -1,6 +1,6 @@
 {
   "name": "vue-black-dashboard",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "private": true,
   "description": "A sample admin dashboard based on black dashboard UI template",
   "author": "cristian.jora <joracristi@gmail.com>",
@@ -14,23 +14,24 @@
   },
   "dependencies": {
     "chart.js": "^2.9.3",
-    "register-service-worker": "^1.7.1",
-    "vue": "^2.6.11",
-    "vue-chartjs": "^3.5.0",
+    "eslint-plugin-vue": "^9.8.0",
+    "register-service-worker": "^1.7.2",
+    "vue": "^2.7.14",
+    "vue-chartjs": "3.5.1",
     "vue-i18n": "^8.18.2",
-    "vue-router": "^3.3.4",
-    "vue-router-prefetch": "^1.6.0",
+    "vue-router": "3.6.5",
+    "vue-router-prefetch": "^1.6.3",
     "vue2-transitions": "^0.3.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.4.6",
-    "@vue/cli-plugin-eslint": "^4.4.6",
-    "@vue/cli-plugin-pwa": "^4.4.6",
-    "@vue/cli-service": "^4.4.6",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^8.0.2",
-    "vue-cli-plugin-i18n": "^1.0.1",
-    "vue-template-compiler": "^2.6.11"
+    "@vue/cli-plugin-babel": "4.5.19",
+    "@vue/cli-plugin-eslint": "4.5.19",
+    "@vue/cli-plugin-pwa": "4.5.19",
+    "@vue/cli-service": "4.5.19",
+    "sass": "1.56.2",
+    "sass-loader": "10.2.0",
+    "vue-cli-plugin-i18n": "2.3.1",
+    "vue-template-compiler": "2.7.14"
   },
   "browserslist": [
     "> 1%",
