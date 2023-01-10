@@ -1,10 +1,10 @@
 /*
  =========================================================
- * Vue Black Dashboard - v1.1.0
+ * Vue Black Dashboard - v1.1.2
  =========================================================
 
  * Product Page: https://www.creative-tim.com/product/black-dashboard
- * Copyright 2018 Creative Tim (http://www.creative-tim.com)
+ * Copyright 2023 Creative Tim (http://www.creative-tim.com)
 
  =========================================================
 
