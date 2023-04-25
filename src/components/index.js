@@ -28,5 +28,5 @@ export {
   BaseButton,
   BaseAlert,
   SidebarPlugin,
-  BaseNav
+  BaseNav,
 };
