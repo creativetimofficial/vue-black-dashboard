@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.1.3] 2023-04-25
+
+- Update dependencies & devDependencies
+
 ## [1.1.2] 2022-01-10
 
 - Update dependencies and devDependencies
