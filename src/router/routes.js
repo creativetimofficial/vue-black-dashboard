@@ -5,6 +5,7 @@ import NotFound from "@/pages/NotFoundPage.vue";
 // Admin pages
 const Dashboard = () => import(/* webpackChunkName: "dashboard" */"@/pages/Dashboard.vue");
 const GroupsList = () => import("@/pages/Groups/List.vue");
+const AccountsList = () => import("@/pages/Accounts/List.vue");
 
 const routes = [
   {
@@ -21,6 +22,11 @@ const routes = [
         path: "groups",
         name: "Groups List",
         component: GroupsList,
+      },
+      {
+        path: "accounts",
+        name: "Accounts List",
+        component: AccountsList,
       }
     ]
   },
