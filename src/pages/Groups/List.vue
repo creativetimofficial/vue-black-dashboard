@@ -1,6 +1,6 @@
 <template>
     <card>
-        <h3 class="font-thin">{{ $t("groups.group_list_title") }}</h3>
+        <h3 class="font-thin">{{ $t("groups.list_title") }}</h3>
         <div class="channels-list">
             <ListItem title="Channel Name"></ListItem>
         </div>
