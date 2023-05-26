@@ -55,13 +55,38 @@ export default {
         phone_number: "",
       },
       code_retrieval_state: false,
-      code_received: null
+      code_received: null,
+      hash_code: null
     }
   },
   methods: {
     async submitForm() {
       if (this.code_retrieval_state) {
         console.log(this.code_received)
+        let params = new URLSearchParams({
+          "session_name": this.form.name,
+          "hash_code": this.hash_code,
+          "code": this.code_received
+        }).toString();
+        this.code_received = null
+        this.hash_code = null
+        const url = `http://localhost:8000/auth_session?${params}`;
+        try {
+          const {data, status} = await axios.post(url);
+          console.log(status)
+          if (status >= 200 && status < 300 && data['detail'] === undefined && data['code'] === 200) {
+            await this.notifyVue('top', 'right',
+              `Logged in with ${this.form.name}`,
+              "success")
+            this.code_retrieval_state = false
+          } else {
+            console.error(`Unexpected response code: ${status}`);
+            await this.notifyVue('top', 'right', `${data['detail']}`)
+          }
+        } catch (error) {
+          console.error(`Error sending request: ${error}`);
+          await this.notifyVue('top', 'right', `${error}`)
+        }
       } else {
         let params = new URLSearchParams(this.form).toString();
         const url = `http://localhost:8000/create_session?${params}`;
@@ -91,16 +116,19 @@ export default {
       }
 
     },
-    async notifyVue(verticalAlign, horizontalAlign, text) {
+    async notifyVue(verticalAlign, horizontalAlign, text, type = 'info') {
       console.log('send')
       this.$notify({
         icon: "tim-icons icon-alert-circle-exc",
         horizontalAlign: horizontalAlign,
         verticalAlign: verticalAlign,
-        type: "info",
+        type: type,
         timeout: 10000,
         message: text
       });
+    },
+    async update_accounts(){
+
     }
 
   }
