@@ -13,6 +13,7 @@
     "lint-fix": "vue-cli-service lint --fix"
   },
   "dependencies": {
+    "axios": "^1.4.0",
     "chart.js": "^2.9.3",
     "eslint-plugin-vue": "^9.8.0",
     "register-service-worker": "^1.7.2",

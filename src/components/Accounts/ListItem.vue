@@ -11,7 +11,6 @@
         {{ active ? 'Active' : 'Not Active' }}
       </span>
   </div>
-
 </template>
 
 
@@ -22,9 +21,6 @@ export default {
     title: {
       type: String,
       required: true,
-    },
-    data: {
-      type: Array,
     },
     img: String,
     active: Boolean,
