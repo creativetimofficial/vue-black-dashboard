@@ -56,7 +56,8 @@ export default {
       },
       code_retrieval_state: false,
       code_received: null,
-      hash_code: null
+      hash_code: null,
+      session_name: ""
     }
   },
   methods: {
@@ -64,7 +65,7 @@ export default {
       if (this.code_retrieval_state) {
         console.log(this.code_received)
         let params = new URLSearchParams({
-          "session_name": this.form.name,
+          "session_name": this.session_name,
           "hash_code": this.hash_code,
           "code": this.code_received
         }).toString();
@@ -88,6 +89,7 @@ export default {
           await this.notifyVue('top', 'right', `${error}`)
         }
       } else {
+        this.session_name = this.form.name
         let params = new URLSearchParams(this.form).toString();
         const url = `http://localhost:8000/create_session?${params}`;
         try {
@@ -127,7 +129,7 @@ export default {
         message: text
       });
     },
-    async update_accounts(){
+    async update_accounts() {
 
     }
 
