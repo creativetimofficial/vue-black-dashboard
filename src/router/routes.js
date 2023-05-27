@@ -5,6 +5,7 @@ import NotFound from "@/pages/NotFoundPage.vue";
 // Admin pages
 const Dashboard = () => import(/* webpackChunkName: "dashboard" */"@/pages/Dashboard.vue");
 const GroupsList = () => import("@/pages/Groups/List.vue");
+const GroupCurrent = () => import("@/pages/Groups/Index.vue");
 
 const routes = [
   {
@@ -21,7 +22,17 @@ const routes = [
         path: "groups",
         name: "Groups List",
         component: GroupsList,
-      }
+      },
+      {
+        path: "groups/:group_id",
+        name: "Group Detail",
+        component: GroupCurrent,
+      },
+      {
+        path: "group/new",
+        name: "Create New Group",
+        component: GroupCurrent,
+      },
     ]
   },
   { path: "*", component: NotFound },
