@@ -25,7 +25,9 @@ export default {
     await this.update_list(); // call update_list on mount to fetch initial data
   },
   methods: {
+
     async update_list() {
+
       try {
         const response = await axios.get('/accounts');
         const data = response.data.result;
