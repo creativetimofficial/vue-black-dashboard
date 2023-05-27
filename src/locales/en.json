@@ -1,16 +1,12 @@
 {
-  "dashboard": {
-    "title": "Dashboard"
-  },
-  "groups": {
-    "title": "Groups",
-    "list_title": "List of Channels"
-  },
-  "settings": {
-    "title": "Settings"
-  },
-  "accounts": {
-    "title": "Accounts",
-    "list_title": "List of Accounts"
-  }
+    "dashboard": {
+        "title": "Dashboard"
+    },
+    "groups": {
+        "title": "Groups",
+        "group_list_title": "List of Channels & Groups"
+    },
+    "settings": {
+        "title": "Settings"
+    }
 }
