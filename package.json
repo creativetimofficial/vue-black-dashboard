@@ -13,6 +13,7 @@
     "lint-fix": "vue-cli-service lint --fix"
   },
   "dependencies": {
+    "axios": "^1.4.0",
     "chart.js": "^2.9.3",
     "eslint-plugin-vue": "^9.8.0",
     "register-service-worker": "^1.7.2",
@@ -21,6 +22,7 @@
     "vue-i18n": "^8.18.2",
     "vue-router": "3.6.5",
     "vue-router-prefetch": "^1.6.3",
+    "vue2-timepicker": "^1.1.6",
     "vue2-transitions": "^0.3.0"
   },
   "devDependencies": {
