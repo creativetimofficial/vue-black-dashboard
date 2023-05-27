@@ -11,51 +11,56 @@
 
 <script>
 import ListItem from "@/components/Accounts/ListItem.vue";
+import axios from 'axios'; // make sure to import axios
 
 export default {
   components: {
     ListItem
   },
   name: "List",
-  mounted() {
+  async mounted() {
     this.$root.$on('update_list', () => {
       this.update_list()
     })
+    await this.update_list(); // call update_list on mount to fetch initial data
   },
   methods: {
-    update_list() {
-      //create ListItem with some properties
-      this.accounts.push({
-        name: "New Name",
-        img: "https://steamuserimages-a.akamaihd.net/ugc/98351418449351690/FFB49D91F536E3CD46D04A6B570944D5D576E054/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
-        active: true,
-        phone_number: "+1234567890"
-      });
-      this.stop_loading()
-    },
+    async update_list() {
+      try {
+        const response = await axios.get('/accounts');
+        const data = response.data.result;
 
+        // Get the main account
+        const mainResponse = await axios.get('/main_account');
+        const mainUserId = mainResponse.data.user.id;
+
+        const accounts = [];
+        for (const item of data) {
+          const account = {
+            name: item[0],
+            phone_number: item[1].phone_number,
+            active: item[1].user.id === mainUserId,
+          };
+
+          const avatarResponse = await axios.get(`/avatars?telegram_id=${item[1].user.id}`);
+          account.img = `data:image/jpeg;base64,${avatarResponse.data}`;
+
+          accounts.push(account);
+        }
+
+        this.accounts = accounts;
+      } catch (error) {
+        console.error('Failed to update list:', error);
+      }
+      this.stop_loading();
+    },
     stop_loading: function () {
-      // setTimeout(() => {
-      //
-      // }, 2000)
       this.$root.$emit('stop_loading')
     }
   },
   data() {
     return {
-      accounts: [
-        {
-          name: "John Doe",
-          img: "https://steamuserimages-a.akamaihd.net/ugc/782985807872552587/6B73164454CA29768BE5C23048D2037EEF2BD57C/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
-          active: true,
-          phone_number: "+79522736909"
-        },
-        {
-          name: "Angry Wolf",
-          img: "https://i.pinimg.com/236x/45/38/22/4538227abf1a77b128a98324bdb7cd7d.jpg",
-          phone_number: "+12025550162"
-        }
-      ]
+      accounts: []
     }
   },
 }

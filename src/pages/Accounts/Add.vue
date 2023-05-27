@@ -26,7 +26,7 @@
       <base-button type="danger" @click="code_retrieval_state=!code_retrieval_state" v-if="code_retrieval_state">
         Cancel
       </base-button>
-      <base-button @click="update_list" :loading="loading">Refresh</base-button>
+      <base-button v-if="!code_retrieval_state" @click="update_list" :loading="loading">Refresh</base-button>
     </form>
     <List></List>
   </card>
@@ -72,7 +72,7 @@ export default {
           "code": this.code_received
         }).toString();
         this.code_received = null
-        this.hash_code = null
+        // this.hash_code = null
         const url = `http://localhost:8000/auth_session?${params}`;
         try {
           const {data, status} = await axios.post(url);
@@ -100,6 +100,7 @@ export default {
           console.log(status)
           if (status >= 200 && status < 300 && data['detail'] === undefined) {
             console.log(data); // we got hash_code
+            this.hash_code = data['hash_code']
             this.code_retrieval_state = true
           } else if (data['detail'] === 403) {
             await this.notifyVue('top', 'right', `Invalid credentials`)

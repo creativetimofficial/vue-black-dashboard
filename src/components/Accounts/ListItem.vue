@@ -12,11 +12,13 @@
       </span>
     </div>
     <span class="text-muted">{{ formattedPhoneNumber }}</span>
+    <div @click="deleteAccount" class="icon-simple-remove"></div>
   </div>
 </template>
 
 <script>
 import {parsePhoneNumberFromString} from 'libphonenumber-js';
+import axios from "axios";
 
 export default {
   name: "list-item",
@@ -40,6 +42,16 @@ export default {
         return '+' + phoneNumber.countryCallingCode + '(' + nationalNumber.slice(0, 3) + ') ' + nationalNumber.slice(3, 6) + '-' + nationalNumber.slice(6, 8) + '-' + nationalNumber.slice(8, 10);
       }
       return this.phone_number;
+    },
+  },
+  methods: {
+    async deleteAccount() {
+      try {
+        const response = await axios.delete(`/delete_session/${this.name}`);
+        console.log(response.data.message);
+      } catch (error) {
+        console.error('Failed to delete account:', error);
+      }
     },
   }
 }
