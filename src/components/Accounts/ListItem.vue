@@ -3,29 +3,51 @@
     <div class="account-icon">
       <img :src="img" alt="AccountName">
     </div>
-    <div class="account-body">
-      <h4 class="font-medium p-0 m-0 pb-2">{{ title }}</h4>
-
-    </div>
-    <span :style="{ color: active ? 'green' : 'red' }">
-        {{ active ? 'Active' : 'Not Active' }}
+    <div class="account-details">
+      <div class="account-body">
+        <h4 class="font-medium p-0 m-0 pb-2">{{ name }}</h4>
+      </div>
+      <span :style="{ color: active ? 'green' : 'red' }">
+          {{ active ? 'Active' : 'Inactive' }}
       </span>
+    </div>
+    <span class="text-muted">{{ formattedPhoneNumber }}</span>
   </div>
 </template>
 
-
 <script>
+import {parsePhoneNumberFromString} from 'libphonenumber-js';
+
 export default {
   name: "list-item",
   props: {
-    title: {
+    name: {
       type: String,
       required: true,
     },
     img: String,
     active: Boolean,
+    phone_number: {
+      type: String,
+      required: true
+    }
+  },
+  computed: {
+    formattedPhoneNumber() {
+      const phoneNumber = parsePhoneNumberFromString(this.phone_number);
+      if (phoneNumber) {
+        const nationalNumber = phoneNumber.nationalNumber;
+        return '+' + phoneNumber.countryCallingCode + '(' + nationalNumber.slice(0, 3) + ') ' + nationalNumber.slice(3, 6) + '-' + nationalNumber.slice(6, 8) + '-' + nationalNumber.slice(8, 10);
+      }
+      return this.phone_number;
+    },
   }
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.account-details {
+  display: flex;
+  flex-direction: column;
+}
+</style>

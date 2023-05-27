@@ -16,6 +16,7 @@
     "axios": "^1.4.0",
     "chart.js": "^2.9.3",
     "eslint-plugin-vue": "^9.8.0",
+    "libphonenumber-js": "^1.10.30",
     "register-service-worker": "^1.7.2",
     "vue": "^2.7.14",
     "vue-chartjs": "3.5.1",
