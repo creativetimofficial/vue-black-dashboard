@@ -68,13 +68,11 @@ export default {
     align-items: center;
     justify-content: center;
 }
-
 .channel-icon img {
     width: 50px;
     height: 50px;
     border-radius: 50px;
 }
-
 .channel .channel-body .channel-statistic {
     display: flex;
     gap: 1rem;
