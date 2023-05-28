@@ -14,6 +14,7 @@
       </div>
       <span class="text-muted">{{ formattedPhoneNumber }}</span>
       <div @click="deleteAccount" class="tim-icons icon-simple-remove"></div>
+      <button class="absurd-button" @click="makeMain">Make Main</button>
     </div>
   </div>
 </template>
@@ -52,11 +53,14 @@ export default {
       try {
         const response = await axios.delete(`http://localhost:8000/delete_session/${this.id}`);
         console.log(response.data.message);
-        this.isVisible=false
+        this.isVisible = false
       } catch (error) {
         console.error('Failed to delete account:', error);
-        this.isVisible=false
+        this.isVisible = false
       }
+    },
+    makeMain() {
+      this.$emit('make-main', this.id);
     },
   },
   data() {
@@ -72,4 +76,33 @@ export default {
   display: flex;
   flex-direction: column;
 }
+.list-item {
+  position: relative;
+}
+//
+//.absurd-button {
+//  display: inline-block;
+//  padding: 20px 40px;
+//  background-color: #007BFF;
+//  color: white;
+//  text-align: center;
+//  text-decoration: none;
+//  font-size: 20px;
+//  transition: transform 0.3s;
+//  border: 3px solid #000000; /* Add a border */
+//  cursor: pointer;
+//  /* Transform the button into a parallelogram */
+//  transform: skew(20deg);
+//  /* Make the button cover half of the list item */
+//  position: absolute;
+//  top: 25%;
+//  left: 25%;
+//  width: 50%;
+//  height: 50%;
+//  z-index: 9999;
+//}
+//
+//.absurd-button:hover {
+//  background-color: #0056b3;
+//}
 </style>

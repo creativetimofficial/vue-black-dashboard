@@ -6,6 +6,7 @@
               :img="account.img"
               :active="account.active"
               :phone_number="account.phone_number"
+              @make-main="makeMain"
     ></ListItem>
   </div>
 </template>
@@ -47,8 +48,9 @@ export default {
             active: item.__data__.id === mainUserId,
           };
 
-          // const avatarResponse = await axios.get(`${process.env.VUE_APP_BASE_API_URL}/avatars?telegram_id=${item[1].user.id}`);
-          // account.img = `data:image/jpeg;base64,${avatarResponse.data}`;
+          const avatarResponse = await axios.get(
+            `${process.env.VUE_APP_BASE_API_URL}/avatars?telegram_id=${item.__data__.id}`);
+          account.img = `data:image/jpeg;base64,${avatarResponse.data}`;
 
           accounts.push(account);
         }
@@ -61,6 +63,15 @@ export default {
     },
     stop_loading: function () {
       this.$root.$emit('stop_loading')
+    },
+    async makeMain(id) {
+      try {
+        const response = await axios.post(`${process.env.VUE_APP_BASE_API_URL}/main_account`, id);
+        console.log(response.data.message);
+        await this.update_list();
+      } catch (error) {
+        console.error('Failed to make account main:', error);
+      }
     }
   },
   data() {
