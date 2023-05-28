@@ -89,8 +89,8 @@ export default {
           `${process.env.VUE_APP_BASE_API_URL}/configs/`
         );
         this.configs = response.data.map((config) => ({
-          name: config.__data__.name,
-          value: config.__data__.value,
+          name: config.name,
+          value: config.value,
           isNew: false,
           isDirty: false,
         }));
