@@ -68,7 +68,7 @@
             <base-button :disabled="isFormDisabled" type="success" @click="selectLink(row)" size="sm" icon>
               <i class="tim-icons icon-settings"></i>
             </base-button>
-            <base-button :disabled="isFormDisabled" type="danger" size="sm" icon>
+            <base-button @click="deleteLink(row)" :disabled="isFormDisabled" type="danger" size="sm" icon>
               <i class="tim-icons icon-simple-remove"></i>
             </base-button>
           </td>
@@ -159,7 +159,9 @@ export default {
           this.fetchData(this.data.id);
         })
       } else if (this.state === "new") {
-        this.data.start_time = `${this.data.start_time["HH"]}:${this.data.start_time["mm"]}`;
+        if (typeof this.data.start_time !== 'string') {
+            this.data.start_time = `${this.data.start_time.HH}:${this.data.start_time.mm}`;
+        }
         axios.post(`${process.env.VUE_APP_BASE_API_URL}/channels/`, this.data).then(res => {
           this.$notify({
             component: Success,
@@ -173,6 +175,11 @@ export default {
           this.$router.push(`/groups/${res.data.__data__.id}`)
         })
       }
+    },
+    deleteLink(row) {
+        axios.delete(`${process.env.VUE_APP_BASE_API_URL}/links/${row.id}`).then(res => {
+            this.fetchLinks(this.data.id);
+        })
     },
     fetchData(DetailID) {
       axios.get(`${process.env.VUE_APP_BASE_API_URL}/channels/${DetailID}`).then(res => {
