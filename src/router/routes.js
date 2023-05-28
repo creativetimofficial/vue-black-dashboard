@@ -7,6 +7,8 @@ const Dashboard = () => import(/* webpackChunkName: "dashboard" */"@/pages/Dashb
 const GroupsList = () => import("@/pages/Groups/List.vue");
 const GroupCurrent = () => import("@/pages/Groups/Index.vue");
 const AccountsList = () => import("@/pages/Accounts/List.vue");
+const Settings = () => import("@/pages/Settings.vue");
+
 
 const routes = [
   {
@@ -39,6 +41,11 @@ const routes = [
         name: "Create New Group",
         component: GroupCurrent,
       },
+      {
+        path: "settings",
+        name: "Settings",
+        component: Settings
+      }
     ]
   },
   { path: "*", component: NotFound },
