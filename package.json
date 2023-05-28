@@ -23,6 +23,7 @@
     "vue-i18n": "^8.18.2",
     "vue-router": "3.6.5",
     "vue-router-prefetch": "^1.6.3",
+    "vue2-timepicker": "^1.1.6",
     "vue2-transitions": "^0.3.0"
   },
   "devDependencies": {

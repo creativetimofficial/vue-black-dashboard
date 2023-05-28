@@ -5,3 +5,5 @@ yarn.lock
 npm-debug.log
 .idea/
 dist/
+.vscode/launch.json
+.env

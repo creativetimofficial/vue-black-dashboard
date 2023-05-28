@@ -1,17 +1,45 @@
 <template>
-    <card>
-        <h3 class="font-thin">{{ $t("groups.list_title") }}</h3>
-        <div class="channels-list">
-            <ListItem title="Channel Name"></ListItem>
-        </div>
-    </card>
+    <div>
+        <card>
+            <h3 class="font-thin">{{ $t("groups.list_title") }}</h3>
+            <div class="channels-list">
+                <ListItem v-for="channel in allChannels" :key="channel.id" :title="channel?.label || channel.telegram_id" :data="channel" @channelSelected="channelSelectOptions"></ListItem>
+
+            </div>
+        </card>
+        <ActionsModal :data="selectedChannel" v-model="actionsModalIsActive">
+            <template #title>
+                <h4>{{ selectedChannel?.label || selectedChannel.telegram_id }}</h4>
+            </template>
+        </ActionsModal>
+    </div>
 </template>
 
 <script>
+import ActionsModal from '../../components/Groups/ActionsModal.vue';
 import ListItem from '../../components/Groups/ListItem.vue';
+import axios from "axios";
 
-    export default {
-    components: { ListItem }
+export default {
+    components: { ListItem, ActionsModal },
+    data() {
+        return {
+            selectedChannel: null,
+            actionsModalIsActive: false,
+            allChannels: [],
+        }
+    },
+    mounted() {
+        axios.get(`${process.env.VUE_APP_BASE_API_URL}/channels`).then(res => {
+            this.allChannels = res.data;
+        })
+    },
+    methods: {
+        channelSelectOptions(channel) {
+            this.selectedChannel = channel;
+            this.actionsModalIsActive = !this.actionsModalIsActive;
+        }
+    }
 }
 </script>
 
@@ -20,16 +48,20 @@ import ListItem from '../../components/Groups/ListItem.vue';
     display: flex;
     flex-direction: column;
 }
-.channels-list .channel, .list-item {
+
+.channels-list .channel,
+.list-item {
     display: flex;
     gap: 1rem;
     padding: 1rem 1.5rem;
     border-radius: 8px;
     cursor: pointer;
 }
+
 .list-item:hover {
     background-color: #333652;
 }
+
 .channel-icon {
     width: 50px;
     display: flex;
@@ -47,5 +79,4 @@ import ListItem from '../../components/Groups/ListItem.vue';
     list-style: none;
     padding: 0;
     margin: 0;
-}
-</style>
+}</style>
