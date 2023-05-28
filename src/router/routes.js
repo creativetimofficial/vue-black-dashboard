@@ -6,7 +6,9 @@ import NotFound from "@/pages/NotFoundPage.vue";
 const Dashboard = () => import(/* webpackChunkName: "dashboard" */"@/pages/Dashboard.vue");
 const GroupsList = () => import("@/pages/Groups/List.vue");
 const GroupCurrent = () => import("@/pages/Groups/Index.vue");
+const AccountsList = () => import("@/pages/Accounts/List.vue");
 const Settings = () => import("@/pages/Settings.vue");
+
 
 const routes = [
   {
@@ -23,6 +25,11 @@ const routes = [
         path: "groups",
         name: "Groups List",
         component: GroupsList,
+      },
+      {
+        path: "accounts",
+        name: "Accounts List",
+        component: AccountsList,
       },
       {
         path: "groups/:group_id",
