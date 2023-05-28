@@ -3,11 +3,20 @@
         <card>
             <h3 class="font-thin">{{ $t("groups.list_title") }}</h3>
             <div class="channels-list">
+<<<<<<< Updated upstream
                 <ListItem v-for="channel in allChannels" :key="channel.id" :title="channel?.label || channel.telegram_id" :data="channel" @channelSelected="channelSelectOptions"></ListItem>
 
             </div>
         </card>
         <ActionsModal :data="selectedChannel" v-model="actionsModalIsActive">
+=======
+                <ListItem v-for="channel in allChannels" :key="channel.id" :title="channel?.label || channel.telegram_id"
+                    :data="channel" @channelSelected="channelSelectOptions"></ListItem>
+
+            </div>
+        </card>
+        <ActionsModal @delete="deleteChannel()" :data="selectedChannel" v-model="actionsModalIsActive">
+>>>>>>> Stashed changes
             <template #title>
                 <h4>{{ selectedChannel?.label || selectedChannel.telegram_id }}</h4>
             </template>
@@ -30,14 +39,22 @@ export default {
         }
     },
     mounted() {
-        axios.get(`${process.env.VUE_APP_BASE_API_URL}/channels`).then(res => {
-            this.allChannels = res.data;
-        })
+        this.fetchChannels();
     },
     methods: {
+        fetchChannels() {
+            axios.get(`${process.env.VUE_APP_BASE_API_URL}/channels`).then(res => {
+                this.allChannels = res.data;
+            })
+        },
         channelSelectOptions(channel) {
             this.selectedChannel = channel;
             this.actionsModalIsActive = !this.actionsModalIsActive;
+        },
+        deleteChannel() {
+            axios.delete(`${process.env.VUE_APP_BASE_API_URL}/channels/${this.selectedChannel.id}`).then(res => {
+                this.fetchChannels();
+            })
         }
     }
 }
