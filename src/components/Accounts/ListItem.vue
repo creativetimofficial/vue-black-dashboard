@@ -25,6 +25,7 @@ import axios from "axios";
 export default {
   name: "list-item",
   props: {
+    id: Number,
     name: {
       type: String,
       required: true,
@@ -49,7 +50,7 @@ export default {
   methods: {
     async deleteAccount() {
       try {
-        const response = await axios.delete(`http://localhost:8000/delete_session/${this.name}`);
+        const response = await axios.delete(`http://localhost:8000/delete_session/${this.id}`);
         console.log(response.data.message);
         this.isVisible=false
       } catch (error) {

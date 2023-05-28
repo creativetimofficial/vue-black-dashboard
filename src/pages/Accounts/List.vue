@@ -1,6 +1,7 @@
 <template>
   <div class="accounts-list">
     <ListItem v-for="(account, index) in accounts" :key="index"
+              :id="account.id"
               :name="account.name"
               :img="account.img"
               :active="account.active"
@@ -30,22 +31,24 @@ export default {
 
       try {
         const response = await axios.get(`${process.env.VUE_APP_BASE_API_URL}/accounts`);
-        const data = response.data.result;
+        console.log(response.data)
+        const data = response.data;
 
         // Get the main account
         const mainResponse = await axios.get(`${process.env.VUE_APP_BASE_API_URL}/main_account`);
-        const mainUserId = mainResponse.data.user.id;
+        const mainUserId = mainResponse.data.__data__.id;
 
         const accounts = [];
         for (const item of data) {
           const account = {
-            name: item[0],
-            phone_number: item[1].phone_number,
-            active: item[1].user.id === mainUserId,
+            id: item.__data__.id,
+            name: item.__data__.name,
+            phone_number: item.__data__.phone_number,
+            active: item.__data__.id === mainUserId,
           };
 
-          const avatarResponse = await axios.get(`${process.env.VUE_APP_BASE_API_URL}/avatars?telegram_id=${item[1].user.id}`);
-          account.img = `data:image/jpeg;base64,${avatarResponse.data}`;
+          // const avatarResponse = await axios.get(`${process.env.VUE_APP_BASE_API_URL}/avatars?telegram_id=${item[1].user.id}`);
+          // account.img = `data:image/jpeg;base64,${avatarResponse.data}`;
 
           accounts.push(account);
         }
