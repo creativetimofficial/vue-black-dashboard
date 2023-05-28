@@ -3,20 +3,12 @@
         <card>
             <h3 class="font-thin">{{ $t("groups.list_title") }}</h3>
             <div class="channels-list">
-<<<<<<< Updated upstream
-                <ListItem v-for="channel in allChannels" :key="channel.id" :title="channel?.label || channel.telegram_id" :data="channel" @channelSelected="channelSelectOptions"></ListItem>
-
-            </div>
-        </card>
-        <ActionsModal :data="selectedChannel" v-model="actionsModalIsActive">
-=======
                 <ListItem v-for="channel in allChannels" :key="channel.id" :title="channel?.label || channel.telegram_id"
                     :data="channel" @channelSelected="channelSelectOptions"></ListItem>
 
             </div>
         </card>
         <ActionsModal @delete="deleteChannel()" :data="selectedChannel" v-model="actionsModalIsActive">
->>>>>>> Stashed changes
             <template #title>
                 <h4>{{ selectedChannel?.label || selectedChannel.telegram_id }}</h4>
             </template>
