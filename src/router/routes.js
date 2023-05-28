@@ -5,8 +5,10 @@ import NotFound from "@/pages/NotFoundPage.vue";
 // Admin pages
 const Dashboard = () => import(/* webpackChunkName: "dashboard" */"@/pages/Dashboard.vue");
 const GroupsList = () => import("@/pages/Groups/List.vue");
+const GroupCurrent = () => import("@/pages/Groups/Index.vue");
 const AccountsList = () => import("@/pages/Accounts/Add.vue");
-//
+const Settings = () => import("@/pages/Settings.vue");
+
 const routes = [
   {
     path: "/",
@@ -27,6 +29,21 @@ const routes = [
         path: "accounts",
         name: "Accounts List",
         component: AccountsList,
+      },
+      {
+        path: "groups/:group_id",
+        name: "Group Detail",
+        component: GroupCurrent,
+      },
+      {
+        path: "group/new",
+        name: "Create New Group",
+        component: GroupCurrent,
+      },
+      {
+        path: "settings",
+        name: "Settings",
+        component: Settings
       }
     ]
   },

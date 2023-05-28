@@ -2,12 +2,13 @@
   <footer class="footer">
     <div class="container-fluid">
       <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.pornhub.com/gay">
-            gay porn
-          </a>
-        </li>
+        <!-- Осуждаю! -->
       </ul>
+      <div class="copyright">
+        © {{year}} made with <i class="tim-icons icon-heart-2"></i> by
+        <a href="https://www.binarcode.com" target="_blank" rel="noopener">Binar Code</a>&nbsp;&
+        <a href="https://www.creative-tim.com" target="_blank" rel="noopener">Creative Tim</a> for a better web.
+      </div>
     </div>
   </footer>
 </template>
