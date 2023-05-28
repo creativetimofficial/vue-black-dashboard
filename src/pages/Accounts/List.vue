@@ -29,11 +29,11 @@ export default {
     async update_list() {
 
       try {
-        const response = await axios.get('/accounts');
+        const response = await axios.get(`${process.env.VUE_APP_BASE_API_URL}/accounts`);
         const data = response.data.result;
 
         // Get the main account
-        const mainResponse = await axios.get('/main_account');
+        const mainResponse = await axios.get(`${process.env.VUE_APP_BASE_API_URL}/main_account`);
         const mainUserId = mainResponse.data.user.id;
 
         const accounts = [];
@@ -44,7 +44,7 @@ export default {
             active: item[1].user.id === mainUserId,
           };
 
-          const avatarResponse = await axios.get(`/avatars?telegram_id=${item[1].user.id}`);
+          const avatarResponse = await axios.get(`${process.env.VUE_APP_BASE_API_URL}/avatars?telegram_id=${item[1].user.id}`);
           account.img = `data:image/jpeg;base64,${avatarResponse.data}`;
 
           accounts.push(account);
