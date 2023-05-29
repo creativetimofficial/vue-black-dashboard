@@ -16,7 +16,7 @@
         ></base-input>
       </div>
       <div class="form-group">
-        <base-button type="success">Login</base-button>
+        <base-button @click="submitForm" type="success">Login</base-button>
       </div>
     </form>
   </div>
