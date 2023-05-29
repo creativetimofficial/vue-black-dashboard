@@ -7,6 +7,7 @@ const Dashboard = () => import(/* webpackChunkName: "dashboard" */"@/pages/Dashb
 const GroupsList = () => import("@/pages/Groups/List.vue");
 const GroupCurrent = () => import("@/pages/Groups/Index.vue");
 const AccountsList = () => import("@/pages/Accounts/Add.vue");
+const Websites = () => import("@/pages/Websites.vue");
 const Settings = () => import("@/pages/Settings.vue");
 
 const routes = [
@@ -44,6 +45,11 @@ const routes = [
         path: "settings",
         name: "Settings",
         component: Settings
+      },
+      {
+        path: "websites",
+        name: "Websites List",
+        component: Websites
       }
     ]
   },
