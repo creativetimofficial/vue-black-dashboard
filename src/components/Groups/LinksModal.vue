@@ -92,6 +92,10 @@ export default {
                 axios.post(`${process.env.VUE_APP_BASE_API_URL}/links`, {
                     website: this.data.website.id,
                     link_id: this.channelId,
+                }, {
+                    headers: {
+                        Authorization: localStorage.getItem("auth_token")
+                    }
                 }).then(res => {
                     this.closeModal();
                     this.$emit("onSuccess", res);
@@ -101,6 +105,10 @@ export default {
                 axios.put(`${process.env.VUE_APP_BASE_API_URL}/links/${this.data.id}`, {
                     website: this.data.website.id,
                     link_id: this.channelId,
+                }, {
+                    headers: {
+                        Authorization: localStorage.getItem("auth_token")
+                    }
                 }).then(res => {
                     this.closeModal();
                     this.$emit("onSuccess", res);
@@ -108,7 +116,11 @@ export default {
             }
         },
         fetchWebsites() {
-            axios.get(`${process.env.VUE_APP_BASE_API_URL}/websites`).then(res => {
+            axios.get(`${process.env.VUE_APP_BASE_API_URL}/websites`, {
+                headers: {
+                    Authorization: localStorage.getItem("auth_token")
+                }
+            }).then(res => {
                 this.websites = res.data;
             })
         },

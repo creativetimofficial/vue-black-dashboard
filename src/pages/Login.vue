@@ -41,6 +41,7 @@ export default {
         if (response.data.access_token) {
           localStorage.setItem('auth_token', response.data.access_token);
           await this.notifyVue('top', 'right', `Logged in with ${this.form.username}`, "success");
+          this.$router.push({ path: "/dashboard" });
         } else {
           await this.notifyVue('top', 'right', `Failed to log in`, "danger");
         }
