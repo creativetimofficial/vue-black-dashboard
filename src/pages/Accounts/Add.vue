@@ -8,11 +8,11 @@
       </base-input>
       <base-input v-if="!code_retrieval_state">
         <label>API ID</label>
-        <input v-model="form.api_id" type="number" class="form-control" placeholder="API ID">
+        <input v-model="form.app_id" type="number" class="form-control" placeholder="API ID">
       </base-input>
       <base-input v-if="!code_retrieval_state">
         <label>API Hash</label>
-        <input v-model="form.api_hash" type="text" class="form-control" placeholder="API Hash">
+        <input v-model="form.app_secret" type="text" class="form-control" placeholder="API Hash">
       </base-input>
       <base-input v-if="!code_retrieval_state">
         <label>Phone Number</label>
@@ -42,15 +42,15 @@ export default {
     return {
       form: {
         name: "",
-        api_id: null,
-        api_hash: "",
+        app_id: null,
+        app_secret: "",
         phone_number: "",
       },
       code_retrieval_state: false,
       code_received: null,
       hash_code: null,
       session_name: "",
-      loading:false
+      loading: false
     }
   },
   mounted() {
@@ -60,67 +60,50 @@ export default {
   },
   methods: {
     update_list: function () {
-      this.loading=true
+      this.loading = true
       this.$root.$emit('update_list')
     },
     async submitForm() {
       if (this.code_retrieval_state) {
-        console.log(this.code_received)
-        let params = new URLSearchParams({
-          "session_name": this.session_name,
-          "hash_code": this.hash_code,
-          "code": this.code_received
-        }).toString();
+        try {
+          const url = `http://localhost:8000/auth_session/?session_id=${this.session_name}&hash_code=${this.hash_code}&code=${this.code_received}`;
+          const response = await axios.post(url);
+          if (response.data.code === 200) {
+            await this.notifyVue('top', 'right', `Logged in with ${this.form.name}`, "success");
+            this.update_list();
+            this.code_retrieval_state = false;
+          } else {
+            console.error(`Unexpected response code: ${response.data.code}`);
+            await this.notifyVue('top', 'right', `${response.data.detail}`)
+          }
+        } catch (error) {
+          console.error(`Error sending request: ${error}`);
+          await this.notifyVue('top', 'right', `${error}`)
+        }
         this.code_received = null
-        // this.hash_code = null
-        const url = `http://localhost:8000/auth_session?${params}`;
-        try {
-          const {data, status} = await axios.post(url);
-          console.log(status)
-          if (status >= 200 && status < 300 && data['detail'] === undefined && data['code'] === 200) {
-            await this.notifyVue('top', 'right',
-              `Logged in with ${this.form.name}`,
-              "success")
-            this.update_list()
-            this.code_retrieval_state = false
-          } else {
-            console.error(`Unexpected response code: ${status}`);
-            await this.notifyVue('top', 'right', `${data['detail']}`)
-          }
-        } catch (error) {
-          console.error(`Error sending request: ${error}`);
-          await this.notifyVue('top', 'right', `${error}`)
-        }
       } else {
-        this.session_name = this.form.name
-        let params = new URLSearchParams(this.form).toString();
-        const url = `http://localhost:8000/create_session?${params}`;
         try {
-          const {data, status} = await axios.post(url);
-          console.log(status)
-          if (status >= 200 && status < 300 && data['detail'] === undefined) {
-            console.log(data); // we got hash_code
-            this.hash_code = data['hash_code']
-            this.code_retrieval_state = true
-          } else if (data['detail'] === 403) {
-            await this.notifyVue('top', 'right', `Invalid credentials`)
-          } else {
-            console.error(`Unexpected response code: ${status}`);
-            await this.notifyVue('top', 'right', `${data['detail']}`)
-          }
+          const response = await axios.post(`http://localhost:8000/accounts`, this.form);
+          this.session_name = response.data.__data__.id; // Use the id from the response data as the session name
+          this.code_retrieval_state = true;
+
+          // Call /create_session with session_id
+          const sessionIdResponse = await axios.post(`http://localhost:8000/create_session`, this.id);
+          this.hash_code = sessionIdResponse.data.hash_code;
+
         } catch (error) {
           console.error(`Error sending request: ${error}`);
           await this.notifyVue('top', 'right', `${error}`)
         }
+
         // Clear the form
         this.form = {
           name: "",
-          api_id: null,
-          api_hash: "",
+          app_id: null,
+          app_secret: "",
           phone_number: "",
         }
       }
-
     },
     async notifyVue(verticalAlign, horizontalAlign, text, type = 'info') {
       console.log('send')

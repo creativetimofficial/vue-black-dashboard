@@ -12,5 +12,8 @@
   "accounts": {
     "title": "Accounts",
     "list_title": "List of Accounts"
+  },
+  "websites": {
+    "title": "Websites"
   }
 }
