@@ -259,7 +259,7 @@ export default {
       mapOptions
     );
 
-    let marker = new window.google.maps.Marker({
+    let marker = new window.google.maps.marker.AdvancedMarkerElement({
       position: myLatlng,
       title: "Hello World!",
     });
