@@ -5,11 +5,7 @@
     "performance": "أداء",
     "simpleTable": "جدول بسيط",
     "totalShipments": "مجموع الشحنات",
-    "chartCategories": [
-      "حسابات",
-      "المشتريات",
-      "جلسات"
-    ],
+    "chartCategories": ["حسابات", "المشتريات", "جلسات"],
     "tasks": "تتبع",
     "today": "اليوم",
     "dropdown": {
@@ -19,12 +15,7 @@
     },
     "usersTable": {
       "title": "جدول بسيط",
-      "columns": [
-        "اسم",
-        "بلد",
-        "مدينة",
-        "راتب"
-      ],
+      "columns": ["اسم", "بلد", "مدينة", "راتب"],
       "data": [
         {
           "id": 1,

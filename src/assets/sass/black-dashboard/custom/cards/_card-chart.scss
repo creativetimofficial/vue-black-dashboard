@@ -1,30 +1,30 @@
 .card-chart {
   overflow: hidden;
-  .card-header{
-    .card-title{
-      i{
+  .card-header {
+    .card-title {
+      i {
         font-size: 16px;
         margin-right: 5px;
         margin-bottom: 3px;
       }
     }
-    .card-category{
+    .card-category {
       margin-bottom: 5px;
     }
   }
-    .card-body{
-      padding-left: 5px;
-      padding-right: 5px;
-      .tab-space{
-        padding: 0;
-      }
+  .card-body {
+    padding-left: 5px;
+    padding-right: 5px;
+    .tab-space {
+      padding: 0;
     }
-  .table{
+  }
+  .table {
     margin-bottom: 0;
 
-    td{
+    td {
       border-top: none;
-      border-bottom: 1px solid rgba($white,0.1);
+      border-bottom: 1px solid rgba($white, 0.1);
     }
   }
 
@@ -40,34 +40,32 @@
   .card-footer {
     margin-top: 15px;
 
-    .stats{
+    .stats {
       color: $dark-gray;
     }
   }
 
-  .dropdown{
+  .dropdown {
     position: absolute;
     right: 20px;
     top: 20px;
 
-    .btn{
+    .btn {
       margin: 0;
     }
   }
 
-  &.card-chart-pie{
-    .chart-area{
+  &.card-chart-pie {
+    .chart-area {
       padding: 10px 0 25px;
       height: auto;
     }
 
-    .card-title{
+    .card-title {
       margin-bottom: 10px;
-      i{
+      i {
         font-size: 1rem;
       }
     }
-
   }
-
 }

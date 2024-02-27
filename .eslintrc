@@ -1,8 +1,6 @@
 {
   "root": true,
-  "extends": [
-    "plugin:vue/essential"
-  ],
+  "extends": ["plugin:vue/essential"],
   "env": {
     "amd": true
   },

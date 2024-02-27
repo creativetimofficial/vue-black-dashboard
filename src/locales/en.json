@@ -5,11 +5,7 @@
     "performance": "Performance",
     "simpleTable": "Simple Table",
     "totalShipments": "Total Shipments",
-    "chartCategories": [
-      "Accounts",
-      "Purchases",
-      "Sessions"
-    ],
+    "chartCategories": ["Accounts", "Purchases", "Sessions"],
     "tasks": "Tasks({count})",
     "today": "Today",
     "dropdown": {
@@ -19,12 +15,7 @@
     },
     "usersTable": {
       "title": "Simple Table",
-      "columns": [
-        "Name",
-        "Country",
-        "City",
-        "Salary"
-      ],
+      "columns": ["Name", "Country", "City", "Salary"],
       "data": [
         {
           "id": 1,

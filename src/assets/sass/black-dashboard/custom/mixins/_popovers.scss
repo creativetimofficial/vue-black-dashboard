@@ -4,15 +4,15 @@
   .popover-header {
     background-color: $background;
     color: color-yiq($background);
-    opacity: .6;
+    opacity: 0.6;
   }
 
   .popover-body {
     color: color-yiq($background);
   }
 
-  .popover-header{
-    border-color: rgba(color-yiq($background), .2);
+  .popover-header {
+    border-color: rgba(color-yiq($background), 0.2);
   }
 
   &.bs-popover-top {
