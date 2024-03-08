@@ -1,48 +1,27 @@
 {
-  "name": "vue-black-dashboard",
-  "version": "1.1.3",
+  "name": "purple-avito-frontend-bruh_misis",
+  "version": "0.1.0",
   "private": true,
-  "description": "A sample admin dashboard based on black dashboard UI template",
-  "author": "cristian.jora <joracristi@gmail.com>",
   "scripts": {
-    "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build",
-    "e2e": "node test/e2e/runner.js",
-    "lint": "vue-cli-service lint",
-    "dev": "vue-cli-service serve --open",
-    "lint-fix": "vue-cli-service lint --fix",
-    "prettify": "prettier --write ."
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
   },
   "dependencies": {
-    "chart.js": "2.9.4",
-    "eslint-plugin-vue": "9.11.0",
-    "register-service-worker": "^1.7.2",
-    "vue": "2.7.14",
-    "vue-chartjs": "3.5.1",
-    "vue-i18n": "8.28.2",
-    "vue-router": "3.6.5",
-    "vue-router-prefetch": "1.6.3",
-    "vue2-transitions": "0.3.0"
+    "core-js": "^3.8.3",
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.3",
+    "vuex": "^4.0.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "5.0.8",
-    "@vue/cli-plugin-eslint": "5.0.8",
-    "@vue/cli-plugin-pwa": "5.0.8",
-    "@vue/cli-service": "5.0.8",
-    "@vue/eslint-config-prettier": "7.1.0",
-    "@babel/eslint-parser": "7.21.8",
-    "eslint": "8.41.0",
-    "eslint-plugin-prettier": "4.2.1",
-    "eslint-plugin-vue": "9.14.1",
-    "prettier": "2.8.8",
-    "sass": "1.62.1",
-    "sass-loader": "10.2.0",
-    "vue-cli-plugin-i18n": "2.3.2",
-    "vue-template-compiler": "2.7.14"
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not ie <= 11"
+    "not dead",
+    "not ie 11"
   ]
 }
