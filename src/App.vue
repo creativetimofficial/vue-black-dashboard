@@ -1,12 +1,21 @@
 <template>
   <div>
-    <h1>BruhMisis😎</h1>
+    <SideBar/>
   </div>
 </template>
 
 <script>
-export default{
+import SideBar from '@/components/SideBar';
 
+export default{
+  components: {
+    SideBar
+  },
+  data(){
+    return {
+
+    }
+  }
 }
 </script>
 
