@@ -9,6 +9,7 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "core-js": "^3.8.3",
+    "node-windows": "^1.0.0-beta.8",
     "primeicons": "^6.0.1",
     "primevue": "^3.49.1",
     "vue": "^3.2.13",
@@ -19,7 +20,8 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
-    "@vue/cli-service": "~5.0.0"
+    "@vue/cli-service": "~5.0.0",
+    "unplugin-vue-components": "^0.26.0"
   },
   "browserslist": [
     "> 1%",
