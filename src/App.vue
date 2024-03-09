@@ -1,17 +1,31 @@
 <template>
-  <div>
-    <h1>BruhMisis😎</h1>
+  <div class="page-center">
+    <div class="container border p-4">
+      <form>
+        <div class="form-group text-center">
+          <label for="Login1" class="form-label centered-label">Логин</label>
+          <input type="text" class="form-control centered-input" id="Login1">
+        </div>
+        <div class="form-group mt-4 text-center">
+          <button type="button" class="btn btn-primary btn-block">Войти</button>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
-<script>
-export default{
-
-}
-</script>
-
 <style scoped>
-h1{
-  text-align: center;
+.page-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.border {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 400px; 
+  width: 100%; 
 }
 </style>
