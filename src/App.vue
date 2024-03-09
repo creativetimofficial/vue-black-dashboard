@@ -1,36 +1,20 @@
 <template>
   <div>
-    <SideBar/>
+    <login-form></login-form>
   </div>
 </template>
 
 <script>
-import SideBar from '@/components/SideBar';
+import LoginForm from "./pages/LoginForm.vue";
 
 export default{
-  components: {
-    SideBar
-  },
-  data(){
-    return {
+  components: { LoginForm },
 
-    }
-  }
 }
 </script>
 
 <style scoped>
-.page-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.border {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  max-width: 400px; 
-  width: 100%; 
+h1{
+  text-align: center;
 }
 </style>
