@@ -1,18 +1,23 @@
 <template>
-  <div class="page-center">
-    <div class="container border p-4">
-      <form>
-        <div class="form-group text-center">
-          <label for="Login1" class="form-label centered-label">Логин</label>
-          <input type="text" class="form-control centered-input" id="Login1">
-        </div>
-        <div class="form-group mt-4 text-center">
-          <button type="button" class="btn btn-primary btn-block">Войти</button>
-        </div>
-      </form>
-    </div>
+  <div>
+    <SideBar/>
   </div>
 </template>
+
+<script>
+import SideBar from '@/components/SideBar';
+
+export default{
+  components: {
+    SideBar
+  },
+  data(){
+    return {
+
+    }
+  }
+}
+</script>
 
 <style scoped>
 .page-center {
