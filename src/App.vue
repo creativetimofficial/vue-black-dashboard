@@ -1,26 +1,21 @@
 <template>
   <div>
-    <SideBar/>
+    <TreeView/>
   </div>
 </template>
 
+
 <script>
-import SideBar from '@/components/SideBar';
+import TreeView from './components/TreeView';
 
-export default{
+export default {
   components: {
-    SideBar
-  },
-  data(){
-    return {
-
-    }
+    TreeView
   }
 }
 </script>
 
+
 <style scoped>
-h1{
-  text-align: center;
-}
+  
 </style>
