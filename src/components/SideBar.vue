@@ -1,7 +1,7 @@
 <template>
     <div class="sideBar">
         <div class="sideBar_logo">
-            
+            <p>LOGO</p>
         </div>
         <div class="sideBar_item">
             <i class="pi pi-home"></i>
