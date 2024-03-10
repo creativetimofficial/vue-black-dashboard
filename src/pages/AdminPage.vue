@@ -1,8 +1,10 @@
 <template>
-    <nav-bar/>
-    <div class="admin">
-        <side-bar/>
-        <div class="admin_content">
+    <div class="main">
+        <nav-bar/>
+        <div class="admin">
+            <side-bar/>
+            <div class="admin_content">
+            </div>
         </div>
     </div>
 </template>
@@ -22,6 +24,10 @@ export default {
 
 <style scoped>
 
+.main{
+    overflow: hidden;
+}
+
 .admin{
     display: flex;
 }
@@ -31,5 +37,6 @@ export default {
     width: 100%;
     height: 100vh;
     border-radius: 21px 0 0 0;
+    overflow-y: scroll;
 }
 </style>
