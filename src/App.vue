@@ -1,23 +1,20 @@
 <template>
   <div>
-    <login-form></login-form>
     <TreeView/>
   </div>
 </template>
 
 
 <script>
-import LoginForm from "./pages/LoginForm.vue";
-import TreeView from './components/TreeView';
+  import TreeView from './components/TreeView';
+import LoginForm from './pages/LoginForm.vue';
 
-export default{
-  components: { LoginForm },
-
-export default {
-  components: {
-    TreeView
+  export default {
+    components: {
+      TreeView,
+      LoginForm
+    }
   }
-}
 </script>
 
 
