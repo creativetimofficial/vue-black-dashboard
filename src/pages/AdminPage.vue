@@ -1,8 +1,9 @@
 <template>
     <div class="main">
-        <nav-bar/>
+        <side-bar/>
+        <!-- DASHBOARD -->
         <div class="admin">
-            <side-bar/>
+            <nav-bar/>
             <div class="admin_content">
             </div>
         </div>
@@ -10,7 +11,7 @@
 </template>
 
 <script>
-
+//Connect components
 import TreeView from '@/components/TreeView';
 import NavBar from '@/components/NavBar';
 import SideBar from '@/components/SideBar';
@@ -25,18 +26,15 @@ export default {
 <style scoped>
 
 .main{
-    overflow: hidden;
-}
-
-.admin{
-    display: flex;
+    display: grid;
+    grid-template-columns: 300px auto;
+    background-color: #e4e4e4;
 }
 
 .admin_content{
-    background-color: #D6D6D6;
+    background-color: #F3F3F3;
     width: 100%;
     height: 100vh;
     border-radius: 21px 0 0 0;
-    overflow-y: scroll;
 }
 </style>

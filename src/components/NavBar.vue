@@ -1,8 +1,7 @@
 <template>
     <div class="navBar">
-        <a class="navBar-logo"><img src="@/icons/LogoLoginForm.png" alt="Avito">Avito</a>
         <nav>
-            <a class="nav-link messages" aria-current="page" href="#"><i class="pi pi-envelope"></i></a>
+            <a class="nav-link messages" aria-current="page" href="#"><i class="pi pi-comment"></i></a>
 
             <a class="nav-link notification" href="#"><i class="pi pi-bell"></i></a>
 
@@ -14,21 +13,10 @@
 <style scoped>
 
 .navBar {
-    margin: 0 50px;
+    background-color: #e4e4e4;
     padding:15px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navBar-logo{
-    font-size: 24px;
-    color: #000;
-    cursor: default;
-}
-
-.navBar-logo img{
-    height: 20px;
+    flex-direction: row-reverse;
 }
 
 .navBar nav{

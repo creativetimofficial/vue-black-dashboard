@@ -1,14 +1,13 @@
 <template>
-    <div>
-        <div class="sideBar_item" :class="{'current-item': currentItem === true}">
-            <i :class="iconClass"></i>
-            <a href="#">{{ sideText }}</a>
-        </div>
+    <div class="sideBar_item" :class="{'current-item': currentItem === true}">
+        <i :class="iconClass"></i>
+        <a href="#">{{ sideText }}</a>
     </div>
 </template>
 
 <script>
 export default {
+    //Take parameters
     props: {
         sideText: {
             type: String,
@@ -31,32 +30,33 @@ export default {
 .sideBar_item{
     display: flex;
     align-items: center;
-    padding: 0 0 0 10px;
-    margin-left: 50px;
+    padding: 8px;
+    margin: 15px 0 0 50px;
     height: 40px;
-    width: auto;
+    background-color: #F3F3F3;
+    border-radius: 8px;   
+    width: 235px;
+    /* box-shadow: 5px 5px 13px #DBDBDB, -5px -5px 13px #DBDBDB; */
 }
 
 .sideBar_item:hover{
-    background-color: #d6d6d6e6;
-    height: 40px;
-    border-radius: 10px 0 0 10px;
-    width: 200%;
+    border: 1px solid #04e061;
 }
 
 .sideBar_item i{
-    font-size: 1.2em;
+    height: 20px;
     margin: 0 15px 0 0;
 }
 
 .sideBar_item a{
     color: black;
+    font-family: 'Soyuz Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 16px;    
 }
 
 .current-item{
-    background-color: #D6D6D6;
-    border-radius: 10px 0 0 10px;
-    width: 200%;
+    border: 1px solid #04e061;
 }
 
 </style>

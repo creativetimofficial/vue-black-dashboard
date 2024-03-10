@@ -1,11 +1,13 @@
 import { createApp } from 'vue'
 import App from './App'
-import PrimeVue from 'primevue/config'
 import router from '@/router/router';
 
+// Connect PrimeVue
+import PrimeVue from 'primevue/config'
 import 'primevue/resources/themes/lara-light-green/theme.css'
 import 'primeicons/primeicons.css'
 
+// PrimeComponents
 import Tree from 'primevue/tree';
 import Button from 'primevue/button';
 
