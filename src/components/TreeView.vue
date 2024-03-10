@@ -1,7 +1,12 @@
 
 <template>
     <div class="card">
-        <Tree :value="nodes" :filter="true" filterMode="lenient" class="w-full md:w-30rem"></Tree>
+        <Tree 
+        :value="nodes" 
+        :filter="true" 
+        filterMode="lenient" 
+        class="w-full md:w-30rem"
+        ></Tree>
     </div>
 </template>
 
@@ -44,10 +49,8 @@ const expandNode = (node) => {
 
 <style scoped>
 .card{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5;
     width: 400px;
+    height: 250px;
 }
+
 </style>

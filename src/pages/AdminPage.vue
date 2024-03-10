@@ -5,6 +5,15 @@
         <div class="admin">
             <nav-bar/>
             <div class="admin_content">
+                <div class="admin_content_wrapper">
+                    <div class="admin_content_left">
+                        <tree-component :title="'выберите локацию'"/>
+                        <map-component :title="'радиус поиска'"/>
+                    </div>
+                    <div class="admin_content_right">
+                        <tree-component :title="'выберите категорию'"/>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -12,13 +21,14 @@
 
 <script>
 //Connect components
-import TreeView from '@/components/TreeView';
 import NavBar from '@/components/NavBar';
 import SideBar from '@/components/SideBar';
+import TreeComponent from '@/components/TreeComponent';
+import MapComponent from '@/components/MapComponent';
 
 export default {
     components: {
-        TreeView, SideBar, NavBar
+        SideBar, NavBar, TreeComponent, MapComponent
     }
 }
 </script>
@@ -37,4 +47,18 @@ export default {
     height: 100vh;
     border-radius: 21px 0 0 0;
 }
+
+.admin_content_wrapper{
+    padding: 30px 50px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.admin_content_left{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+
 </style>

@@ -3,8 +3,9 @@ export const NodeService = {
     return [
       {
         key: '0',
-        label: 'Россия',
-        data: 'Россия',
+        label: 'Регион',
+        icon: 'pi pi-globe',
+        data: 'Регион',
         children: [
           {
             key: '0-0',
