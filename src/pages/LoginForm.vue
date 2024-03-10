@@ -125,7 +125,7 @@ export default {
 }
 
 .contImage {
-  background-image: url(C:\Users\user\Desktop\Хакатон\hackavito\purple-avito-frontend-bruh_misis\src\icons\LogoLoginForm.png); 
+  background-image: url(@/icons/LogoLoginForm.png); 
   width: 570px;
   height: 513px;
   position: absolute;
