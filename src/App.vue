@@ -5,15 +5,17 @@
 </template>
 
 <script>
-import TreeView from './components/TreeView';
-import LoginForm from './pages/LoginForm.vue';
 
 export default{
-  components: { LoginForm, TreeView },
+
 }
 
 </script>
 
 <style scoped>
-  
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
 </style>

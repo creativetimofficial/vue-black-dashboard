@@ -9,6 +9,8 @@ import 'primeicons/primeicons.css'
 import Tree from 'primevue/tree';
 import Button from 'primevue/button';
 
+import '@/assets/main.css'
+
 const app = createApp(App);
 
 app.use(PrimeVue);
