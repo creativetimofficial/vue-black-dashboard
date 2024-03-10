@@ -121,6 +121,7 @@ export default {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
+  font-size: 28px;
 }
 
 .contImage {

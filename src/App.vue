@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import TreeView from './components/TreeView';
+import TreeView from './components/TreeView';
 import LoginForm from './pages/LoginForm.vue';
 
 export default{
