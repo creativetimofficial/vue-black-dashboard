@@ -16,8 +16,13 @@ import { NodeService } from '@/service/NodeService';
 
 const nodes = ref(null);
 
-onMounted(() => {
-    NodeService.getTreeNodes().then(data => nodes.value = data);
+onMounted(async () => {
+    try {
+        const data = await NodeService.getTreeNodes();
+        nodes.value = data;
+    } catch (error){
+        console.log('Error loading tree nodes', error);
+    }
 });
 
 const expandedKeys = ref({});
@@ -43,7 +48,6 @@ const expandNode = (node) => {
         }
     }
 };
-
 
 </script>
 
