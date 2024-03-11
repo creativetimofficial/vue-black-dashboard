@@ -13,8 +13,8 @@
             <div class="side_menu">
                 <side-item :iconClass="'pi pi-map'" :sideText="'локации и категории'" :currentItem="isCurrentPage('/admin')" @click="$router.push('/admin')" />
                 <side-item :iconClass="'pi pi-dollar'" :sideText="'управление ценами'" :currentItem="isCurrentPage('/controlPrices')" @click="$router.push('/controlPrices')"/>
-                <side-item :iconClass="'pi pi-dollar'" :sideText="'ценовая матрица'" :currentItem="isCurrentPage('/priceMatrix')" @click="$router.push('/priceMatrix')"/>
-                <side-item :iconClass="'pi pi-book'" :sideText="'аналитика и отчеты'" :currentItem="isCurrentPage('/analytics')" @click="$router.push('/analytics')"/>
+                <side-item :iconClass="'pi pi-chart-bar'" :sideText="'ценовая матрица'" :currentItem="isCurrentPage('/priceMatrix')" @click="$router.push('/priceMatrix')"/>
+                <side-item :iconClass="'pi pi-chart-line'" :sideText="'аналитика и отчеты'" :currentItem="isCurrentPage('/analytics')" @click="$router.push('/analytics')"/>
                 <side-item :iconClass="'pi pi-moon'" :sideText="'темная тема'" :currentItem="isCurrentPage('/storage')"/>
                 <side-item :iconClass="'pi pi-bars'" :sideText="'свернуть меню'" :currentItem="isCurrentPage('/storage')"/>
             </div>
