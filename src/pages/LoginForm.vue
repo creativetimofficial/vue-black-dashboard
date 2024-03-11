@@ -41,7 +41,6 @@ export default {
       if(this.Login1 && this.Login1.length > 1){
         this.$router.push('/admin'); 
       } else {
-        loginInput.classList.add('error');
       }
       }
     }
@@ -51,9 +50,7 @@ export default {
 
 <style scoped>
 
-  .error {
-    border: 2px solid red;
-  }
+
 .page {
   background: #EFEFEF;
   display: flex;
