@@ -8,10 +8,11 @@
 
           </div>
           <div class="form-group2">
-            <input v-model="formReg.Login1" type="text" class="form-control " id="Login1" placeholder="Логин">
+            <input v-model="Login1" type="text" class="form-control " id="Login1" placeholder="Логин" ref="loginInput">
           </div>
+          
           <div class="form-group3">
-            <button @click="$router.push('/admin')" class="btn btn-primary ">Войти</button>
+            <button @click="validateInput" class="btn btn-primary ">Войти</button>
           </div>
           <div class="form-group4">
             <span class="textinfo">Узнать свой логин можно у администратора сайта</span>
@@ -30,14 +31,29 @@ export default {
     return {
       step: 1,
       formReg: {
-        Login1: ''
+        Login1: '',
+        errorMessage: '',
+      }
+    }
+  },
+  methods: {
+    validateInput(){
+      if(this.Login1 && this.Login1.length > 1){
+        this.$router.push('/admin'); 
+      } else {
+        loginInput.classList.add('error');
+      }
       }
     }
   }
-}
+
 </script>
 
 <style scoped>
+
+  .error {
+    border: 2px solid red;
+  }
 .page {
   background: #EFEFEF;
   display: flex;
