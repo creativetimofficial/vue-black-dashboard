@@ -41,7 +41,7 @@ export default {
       if(this.Login1 && this.Login1.length > 1){
         this.$router.push('/admin'); 
       } else {
-      }
+        }
       }
     }
   }

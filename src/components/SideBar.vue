@@ -11,7 +11,7 @@
         <aside class="side">
             <!-- SIDE MENU -->
             <div class="side_menu">
-                <router-link to="/admin" >
+                <router-link to= "/admin">
                     <template v-slot="{ navigate_admin }">
                 <side-item :iconClass="'pi pi-map'" :sideText="'локации и категории'" :currentItem="isCurrentPage('/admin')" @click="navigate_admin" />
                     </template>
@@ -120,5 +120,6 @@ export default {
     position: fixed;
     bottom: 40px;
 }
+
 
 </style>
