@@ -8,11 +8,15 @@
                 <div class="admin_content_wrapper">
                     <div class="admin_content_left">
                         <tree-component :title="'выберите локацию'"/>
-                        <map-component :title="'радиус поиска'"/>
                     </div>
                     <div class="admin_content_right">
                         <tree-component :title="'выберите категорию'"/>
                     </div>
+                </div>
+                <div class="map_content">
+                    
+                    <map-component :title="'Pадиус поиска'" />
+                    
                 </div>
             </div>
         </div>
@@ -25,6 +29,7 @@ import NavBar from '@/components/NavBar';
 import SideBar from '@/components/SideBar';
 import TreeComponent from '@/components/TreeComponent';
 import MapComponent from '@/components/MapComponent';
+
 
 export default {
     components: {
@@ -58,6 +63,20 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 35px;
+}
+
+.map_content {
+    text-align: center;
+    background: white;
+    height: 50%;
+    width:1200px;
+    border-radius: 21px;
+    padding: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
 }
 
 
