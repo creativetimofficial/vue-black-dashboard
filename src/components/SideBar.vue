@@ -11,26 +11,10 @@
         <aside class="side">
             <!-- SIDE MENU -->
             <div class="side_menu">
-                <router-link to= "/admin">
-                    <template v-slot="{ navigate_admin }">
-                <side-item :iconClass="'pi pi-map'" :sideText="'локации и категории'" :currentItem="isCurrentPage('/admin')" @click="navigate_admin" />
-                    </template>
-                </router-link>
-                <router-link to="/controlPrices" >
-                    <template v-slot="{ navigate_control }">
-                <side-item :iconClass="'pi pi-dollar'" :sideText="'управление ценами'" :currentItem="isCurrentPage('/controlPrices')" @click="navigate_control "/>
-                    </template>
-                </router-link>
-                <router-link to="/pricematrix" >
-                    <template v-slot="{ navigate_pricematrix }">
-                        <side-item :iconClass="'pi pi-dollar'" :sideText="'ценовая матрица'" :currentItem="isCurrentPage('/pricematrix')" @click="navigate_pricematrix "/>
-                    </template>
-                </router-link>
-                <router-link to="/analitics" >
-                    <template v-slot="{ navigate_analitics }">
-                <side-item :iconClass="'pi pi-book'" :sideText="'аналитика и отчеты'" :currentItem="isCurrentPage('/analitics')" @click="navigate_analitics"/>
-                    </template>
-                </router-link>
+                <side-item :iconClass="'pi pi-map'" :sideText="'локации и категории'" :currentItem="isCurrentPage('/admin')" @click="$router.push('/admin')" />
+                <side-item :iconClass="'pi pi-dollar'" :sideText="'управление ценами'" :currentItem="isCurrentPage('/controlPrices')" @click="$router.push('/controlPrices')"/>
+                <side-item :iconClass="'pi pi-dollar'" :sideText="'ценовая матрица'" :currentItem="isCurrentPage('/priceMatrix')" @click="$router.push('/priceMatrix')"/>
+                <side-item :iconClass="'pi pi-book'" :sideText="'аналитика и отчеты'" :currentItem="isCurrentPage('/analytics')" @click="$router.push('/analytics')"/>
                 <side-item :iconClass="'pi pi-moon'" :sideText="'темная тема'" :currentItem="isCurrentPage('/storage')"/>
                 <side-item :iconClass="'pi pi-bars'" :sideText="'свернуть меню'" :currentItem="isCurrentPage('/storage')"/>
             </div>

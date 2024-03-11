@@ -4,7 +4,7 @@ import AdminPage from "@/pages/AdminPage";
 import LoginForm from "@/pages/LoginForm";
 import PriceMatrix from "@/pages/PriceMatrix";
 import ControlPrices from "@/pages/ControlPrices.vue";
-import Analitics from "@/pages/Analitics.vue";
+import Analytics from "@/pages/Analytics.vue";
 
 const routes = [
     {
@@ -16,7 +16,7 @@ const routes = [
         component: AdminPage
     },
     {
-        path: '/pricematrix',
+        path: '/priceMatrix',
         component: PriceMatrix
     },
     {
@@ -24,8 +24,8 @@ const routes = [
         component: ControlPrices
     },
     {
-        path: '/analitics',
-        component: Analitics
+        path: '/analytics',
+        component: Analytics
     }
 ]
 
