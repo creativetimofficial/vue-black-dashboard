@@ -10,6 +10,10 @@ import 'primeicons/primeicons.css'
 // PrimeComponents
 import Tree from 'primevue/tree';
 import Button from 'primevue/button';
+import DataTable from 'primevue/datatable';
+import Column from 'primevue/column';
+import InputText from 'primevue/inputtext';
+import InputNumber from 'primevue/inputnumber';
 
 import '@/assets/main.css'
 
@@ -20,6 +24,10 @@ app.use(PrimeVue);
 app
     .component('Tree', Tree)
     .component('Button', Button)
+    .component('DataTable', DataTable)
+    .component('Column', Column)
+    .component('InputText', InputText)
+    .component('InputNumber', InputNumber)  
 
 app
     .use(router)

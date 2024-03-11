@@ -4,7 +4,7 @@
         <div class="price">
             <nav-bar/>
             <div class="price_content">
-                
+                <matrix-prime />
             </div>
         </div>
     </div>
@@ -12,15 +12,14 @@
 
 <script>
 
-
 import NavBar from '@/components/NavBar';
 import SideBar from '@/components/SideBar';
-import TreeComponent from '@/components/TreeComponent';
-import MapComponent from '@/components/MapComponent';
+import MatrixComponent from '@/components/MatrixComponent';
+import MatrixPrime from '@/components/MatrixPrime';
 
 export default {
     components: {
-        SideBar, NavBar, TreeComponent, MapComponent
+        SideBar, NavBar, MatrixComponent, MatrixPrime
     }
 }
 </script>
@@ -35,12 +34,7 @@ export default {
 
 .price_content{
     background-color: #F3F3F3;
-    width: 100%;
-    height: 100vh;
     border-radius: 21px 0 0 0;
 }
-
-
-
 
 </style>

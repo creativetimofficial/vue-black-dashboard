@@ -17,6 +17,7 @@
     padding:15px;
     display: flex;
     flex-direction: row-reverse;
+    width: 100%;
 }
 
 .navBar nav{

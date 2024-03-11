@@ -3,7 +3,7 @@
     <div class="contImage"></div>
     <div class="container">
         <div v-show="step === 1" class="step">
-          <div class="textlog">
+          <div class="textLog">
             <h1>Вход</h1>
 
           </div>
@@ -15,7 +15,7 @@
             <button @click="validateInput" class="btn btn-primary ">Войти</button>
           </div>
           <div class="form-group4">
-            <span class="textinfo">Узнать свой логин можно у администратора сайта</span>
+            <span class="textInfo">Узнать свой логин можно у администратора сайта</span>
           </div>
         </div>
     </div>
@@ -69,7 +69,7 @@ export default {
   z-index: 2; 
   position: relative; 
 }
-.textlog{
+.textLog{
   margin-top:20px;
   text-align: center;
   

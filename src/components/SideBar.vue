@@ -75,7 +75,6 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    height: 100vh;
 }
 
 .side-logo{
