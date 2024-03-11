@@ -71,12 +71,11 @@ export default {
     height: 50%;
     width:1200px;
     border-radius: 21px;
-    padding: 20px; 
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     display: flex;
+    margin-left: 65px;
 }
 
 
