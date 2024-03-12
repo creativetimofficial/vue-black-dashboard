@@ -14,12 +14,11 @@
 
 import NavBar from '@/components/NavBar';
 import SideBar from '@/components/SideBar';
-import MatrixComponent from '@/components/MatrixComponent';
 import MatrixPrime from '@/components/MatrixPrime';
 
 export default {
     components: {
-        SideBar, NavBar, MatrixComponent, MatrixPrime
+        SideBar, NavBar, MatrixPrime
     }
 }
 </script>
