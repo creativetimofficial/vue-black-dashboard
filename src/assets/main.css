@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.cdnfonts.com/css/soyuz-grotesk');
+
+/* Zero */
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul,
+ol,
+li{
+    list-style: none;
+}
+
+html, body{
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    color: black;
+    font-family: "Montserrat" sans-serif;
+    font-weight: 600;
+}

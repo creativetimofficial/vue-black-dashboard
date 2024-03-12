@@ -1,31 +1,34 @@
-/*
- =========================================================
- * Vue Black Dashboard - v1.1.3
- =========================================================
+import { createApp } from 'vue'
+import App from './App'
+import router from '@/router/router';
 
- * Product Page: https://www.creative-tim.com/product/black-dashboard
- * Copyright 2024 Creative Tim (http://www.creative-tim.com)
+// Connect PrimeVue
+import PrimeVue from 'primevue/config'
+import 'primevue/resources/themes/lara-light-green/theme.css'
+import 'primeicons/primeicons.css'
 
- =========================================================
+// PrimeComponents
+import Tree from 'primevue/tree';
+import Button from 'primevue/button';
+import DataTable from 'primevue/datatable';
+import Column from 'primevue/column';
+import InputText from 'primevue/inputtext';
+import InputNumber from 'primevue/inputnumber';
 
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+import '@/assets/main.css'
 
- */
-import Vue from "vue";
-import VueRouter from "vue-router";
-import RouterPrefetch from "vue-router-prefetch";
-import App from "./App";
-// TIP: change to import router from "./router/starterRouter"; to start with a clean layout
-import router from "./router/index";
+const app = createApp(App);
 
-import BlackDashboard from "./plugins/blackDashboard";
-import i18n from "./i18n";
-import "./registerServiceWorker";
-Vue.use(BlackDashboard);
-Vue.use(VueRouter);
-Vue.use(RouterPrefetch);
-new Vue({
-  router,
-  i18n,
-  render: (h) => h(App),
-}).$mount("#app");
+app.use(PrimeVue);
+
+app
+    .component('Tree', Tree)
+    .component('Button', Button)
+    .component('DataTable', DataTable)
+    .component('Column', Column)
+    .component('InputText', InputText)
+    .component('InputNumber', InputNumber)  
+
+app
+    .use(router)
+    .mount('#app');
