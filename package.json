@@ -6,7 +6,7 @@
   "author": "cristian.jora <joracristi@gmail.com>",
   "scripts": {
     "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build",
+    "build": "cross-env CI=false vue-cli-service build",
     "e2e": "node test/e2e/runner.js",
     "lint": "vue-cli-service lint",
     "dev": "vue-cli-service serve --open",
@@ -25,12 +25,13 @@
     "vue2-transitions": "0.3.0"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "7.21.8",
     "@vue/cli-plugin-babel": "5.0.8",
     "@vue/cli-plugin-eslint": "5.0.8",
     "@vue/cli-plugin-pwa": "5.0.8",
     "@vue/cli-service": "5.0.8",
     "@vue/eslint-config-prettier": "7.1.0",
-    "@babel/eslint-parser": "7.21.8",
+    "cross-env": "^7.0.3",
     "eslint": "8.41.0",
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-vue": "9.14.1",
