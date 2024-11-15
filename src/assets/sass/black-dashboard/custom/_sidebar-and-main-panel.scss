@@ -26,7 +26,7 @@
   background-size: cover;
   background-position: center center;
   display: block;
-  box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 45px 0px linear-gradient($primary-states, $primary);
   margin-top: 80px;
   margin-left: 20px;
   border-radius: 5px;
